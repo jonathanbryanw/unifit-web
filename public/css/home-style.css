@@ -1,0 +1,147 @@
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.top{
+    margin-top: 50px;
+}
+
+.slider-in{
+    position:relative;
+    width:100%;
+    height:55vh;
+}
+
+.slider-in img{
+	display:none;
+	width:100vw;
+    height:55vh;
+    opacity: 0.6;
+}
+
+.slider-in img.active{
+	display:inline-block;
+}
+
+.left,.right{
+    display: block;
+	position: absolute;
+    top:20%;
+    z-index:50;
+    padding: 2% 2%;
+    width:auto;
+    height:auto;
+    color:#fff;
+    font-weight:600;
+    font-size:2rem;
+	cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.right{
+    right:0;
+}
+
+.left:hover,.right:hover {
+    background-color: rgba(56, 55, 55, 0.507);
+}
+
+.slider-dot{
+    position: absolute;
+    top: 58vh;
+    z-index: 50;
+    display: flex;
+    margin-inline: 47vw;
+}  
+  
+.dot{
+    margin-inline: 5px;
+    z-index: 50;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #cecaca;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+  
+.active-dot, .dot:hover {
+    background-color: #81D98F;
+}
+
+
+.header{
+    position: absolute;
+    top: 22%;
+    left: 35vw;
+}
+
+.header-top{
+    color: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    margin-top: 1%;
+    font-style: italic;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-1, .section-2{
+    display: flex;
+}
+
+.text{
+    height: 30rem;
+    width: 50vw;
+    padding: 1rem 3rem;
+    display: flex;
+}
+
+.title{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    font-weight: 500;
+}
+
+.content{
+    font-size: medium;
+}
+
+.learn{
+    padding: 5px 10px;
+    color: white;
+    background-color: #454545;
+}
+.pict{
+    width: 50vw;
+    height: 30rem;
+    flex-wrap: wrap;
+}
+
+.pict img{
+    width: 100%;
+    max-height: 30rem;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-3{
+    margin: 2% 5%;
+}
+
+.ca-pict{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.ca-pict img{
+    max-width: 20%;
+    max-height: 20%;
+    
+}

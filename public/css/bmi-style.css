@@ -1,0 +1,16 @@
+
+.form{
+    background: #c2c3c2;
+    padding: 25px 28%;
+    margin-top: 7vh;
+}
+
+table, td{
+    padding: 5px 5px 5px 0;
+}
+
+input[type="text"]{
+    width: 250px;
+    height: 23px;
+    padding-left: 2%;
+}
