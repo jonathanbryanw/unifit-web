@@ -101,11 +101,11 @@
 .title{
     font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .subtitle{
-    font-weight: 500;
+    margin-top: 10px;
+    font-weight: 400;
 }
 
 .content{
@@ -131,17 +131,129 @@
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-3{
-    margin: 2% 5%;
+    margin: 2vh 6vw;
 }
 
-.ca-pict{
+.c-title{
+    font-style: italic;
+}
+
+.ca-picts{
     display: flex;
     justify-content: space-between;
+    gap: 5px;
     margin-top: 1%;
 }
 
+.ca-card{
+    width: 30%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.ca-pict{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+}
+
 .ca-pict img{
-    max-width: 20%;
-    max-height: 20%;
-    
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    max-height: none;
+    max-width: none;
+}
+  
+.zoom{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.zoom img{
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 10px);
+    transform: translate(-50%, -50%) scale(0.5);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.ca-text, .ca-subtext{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: xx-large;
+    font-weight: 600;
+    color: #fff;
+    font-style: italic;
+}
+.ca-subtext{
+    font-weight: 400;
+    padding-top: 200px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-4{
+    margin: 2vh 6vw;  
+}
+
+.info-cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-card{
+    width: 40vw;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.info-card img{
+    width: 40vw;
+    height: 30vh;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-5{
+    margin: 2vh 6vw;  
+}
+
+.bmi{
+    background-color: #81D98F;
+}
+
+#input td{
+    padding: 2%;
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+}
+
+#input label{
+    display: block;
+}
+
+#input input{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#input p{
+    background-color: rgba(255, 255, 255, 0.7);
 }

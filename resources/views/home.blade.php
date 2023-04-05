@@ -72,19 +72,108 @@
             </div>
         </div>
         <div class="ca-picts">
-            <div class="ca-pict">
-                <img src="{{asset('images/home-03.png')}}" alt="">
-                <p class="ca-text">Lose<br>Weight</p>
+            <div class="ca-card">
+                <div class="ca-pict">
+                    <img src="{{asset('images/home-03.png')}}" alt="">
+                    <p class="ca-text">Lose<br>Weight</p>
+                </div>
             </div>
-            <div class="ca-pict">
-                <img src="{{asset('images/home-04.png')}}" alt="">
-                <p class="ca-text">Gain<br>Muscle</p>
+            <div class="ca-card">
+                <div class="ca-pict zoom">
+                    <img src="{{asset('images/home-04.png')}}" alt="">
+                    <p class="ca-text">Gain<br>Muscle</p>
+                </div>
             </div>
-            <div class="ca-pict">
-                <img src="{{asset('images/home-05.png')}}" alt="">
-                <p class="ca-text">Maintain<br>Weight</p>
-                <p class="ca-subtext">(Increase Overall<br>Fitness Health)</p>
+            <div class="ca-card">
+                <div class="ca-pict">
+                    <img src="{{asset('images/home-05.png')}}" alt="">
+                    <p class="ca-text">Maintain<br>Weight</p>
+                    <p class="ca-subtext">(Increase Overall<br>Fitness Health)</p>
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="section-4">
+        <div class="c-text">
+            <h1 class="c-title">What <span style="color:#81D98F">We Provide</span></h1>
+        </div>
+        <div class="info-cards">
+            <div class="info-card">
+                <img src="{{asset('images/home-06.jpg')}}" alt="">
+                <h2 class="subtitle">Recommended Unified Fitness Plan</h2>
+                <p class="info-subtext">
+                    With our BMI calculation you will be given a personalized 
+                    fitness plan according to your goal that suits you. If you don’t have time to go to the gym,
+                     no problem at all. Our program is designed in such a way that you can follow your workout plan even at your home.
+                </p>
+            </div>
+            <div class="info-card">
+                <img src="{{asset('images/home-07.png')}}" alt="">
+                <h2 class="subtitle">Connect with Trainer</h2>
+                <p class="info-subtext">
+                    You will be given personalized experts guidance. Our experts will consult you,
+                     find out your problems and weeknesses and provide you a solution for it. They will
+                     help you in changing your bad habits and make you adopt a healthy lifestyle.
+                </p>
+            </div>
+        </div>
+        <div class="info-cards">
+            <div class="info-card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Personalized Nutrition Plan</h2>
+                <p class="info-subtext">
+                    No temporary diets can reduce your body fat. You will be given a personalized nutrition
+                     plan that suits your needs and choices. We will guide you, what exactly you are supposed
+                     to eat everyday. You need not to worry about the calories. Once you enrolled in this program,
+                     it will be our responsibility to count your calories not yours
+                </p>
+            </div>
+            <div class="info-card">
+                <img src="{{asset('images/home-09.jpg')}}" alt="">
+                <h2 class="subtitle">Results</h2>
+                <p class="info-subtext">
+                    At last the only thing that matters is what you do, CONSISTENTLY!! Only action can create
+                     change. The only thing that we want from your side is…. Consistency. That's it. Rest,
+                     we will take care of. We will make you fitter and by the end of 90 days, you yourself
+                     will see the good changes.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-5">
+        <div class="c-text">
+            <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
+            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h2>
+        </div>
+        <div class="bmi">
+            <table style="width:80vw;" id="input">
+                <tr>
+                    <th colspan="2">&nbsp;</th>
+                </tr>
+                <form action="" id="bmiForm">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="weight">Insert your weight</label>
+                                <input type="number" name="weight" id="weight" required>
+                            </td>
+                            <td rowspan="4"><h2>Choose your personalized fitness program!</h2></td>                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="height">Insert your height</label>
+                                <input type="number" name="height" id="height" required>
+                            </td>                      
+                        </tr>
+                        <tr>                            
+                            <td><button type="submit" class="btn btn-secondary">Submit</button></td>
+                        </tr>
+                        <tr>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </tbody>
+                </form>
+            </table> 
         </div>
     </div>
 </div>   
