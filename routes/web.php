@@ -19,6 +19,6 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/bmi', function () {
-    return view('bmi');
+Route::get('/program', function () {
+    return view('program');
 });

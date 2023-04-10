@@ -1,0 +1,23 @@
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.c-text{
+    padding: 25px 6vw;
+    margin-top: 5vh;
+}
+
+.bmiInput{
+    width: 100vw;
+    background-color: #CFCFCF;
+    display: flex;
+}
+
+.form{
+    display: block;
+}
+
+input[type="text"]{
+    width: 250px;
+    height: 23px;
+    padding-left: 2%;
+}

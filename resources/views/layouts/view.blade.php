@@ -21,7 +21,7 @@
             <ul class="nav">
                 <li><a href="{{ url('/') }}" class="nav-link logo">Uni<span style="color:#81D98F">Fit</span></a></li>
                 <li><a href="{{ url('/about') }}" class="nav-link">About Us</a></li>
-                <li><a href="{{ url('/bmi') }}" class="nav-link">Find Program</a></li>
+                <li><a href="{{ url('/program') }}" class="nav-link">Find Program</a></li>
                 <li><a href="" class="nav-link">Trainer Connect</a></li>
                 <li><a href="" class="nav-link">Workouts</a></li>
                 <li><a href="" class="nav-link">Diet</a></li>
@@ -29,9 +29,19 @@
             </ul>        
         </div>
     </header>
-
     <div class="content">
         @yield('content')
+    </div>
+    <div class="footer">
+        <ul class="footer-ul">
+            <li><a href="{{ url('/') }}" class="nav-link logo">Uni<span style="color:#81D98F">Fit</span></a></li>
+            <li><a href="{{ url('/about') }}" class="nav-link">About Us</a></li>
+            <li><a href="{{ url('/program') }}" class="nav-link">Find Program</a></li>
+            <li><a href="" class="nav-link">Trainer Connect</a></li>
+            <li><a href="" class="nav-link">Workouts</a></li>
+            <li><a href="" class="nav-link">Diet</a></li>
+            <li><p class="copy">Unifit 2023</p></li>
+        </ul> 
     </div>
 </body>
 </html>

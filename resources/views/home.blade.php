@@ -68,7 +68,7 @@
         <div class="c-text">
             <div class="t-head">
                 <h1 class="c-title"><span style="color:#81D98F">Categories</span> We Provide</h1>
-                <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h2>
+                <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
             </div>
         </div>
         <div class="ca-picts">
@@ -143,7 +143,7 @@
     <div class="section-5">
         <div class="c-text">
             <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
-            <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h2>
+            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
         </div>
         <div class="bmi">
             <table style="width:80vw;" id="input">
@@ -174,6 +174,95 @@
                     </tbody>
                 </form>
             </table> 
+        </div>
+    </div>
+    <div class="section-6">
+        <div class="c-text">
+            <h1 class="c-title">Our <span style="color:#81D98F">Success Stories</span></h1>
+            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+        </div>
+        <div class="banner-6">
+            
+        </div>
+    </div>
+    <div class="section-7">
+        <div class="c-text">
+            <h1 class="c-title"><span style="color:#81D98F">Our</span> Trainer</h1>
+            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+        </div>
+    </div>
+    <div class="section-8">
+        <div class="c-text">
+            <h1 class="c-title">Checkout Our <span style="color:#81D98F">Healthy Recipes</span></h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Lose Weight</h2>
+                <p class="card-subtext">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
+                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
+                     eligendi deserunt ea facere saepe alias, rem id?
+                </p>
+                <button class="b-card">Read Recipe</button>
+            </div>
+            <div class="card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Gain Muscle</h2>
+                <p class="card-subtext">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
+                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
+                     eligendi deserunt ea facere saepe alias, rem id?
+                </p>
+                <button class="b-card">Read Recipe</button>
+            </div>
+            <div class="card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Increase Health</h2>
+                <p class="card-subtext">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
+                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
+                     eligendi deserunt ea facere saepe alias, rem id?
+                </p>
+                <button class="b-card">Read Recipe</button>
+            </div>
+        </div>
+    </div>
+    <div class="section-9">
+        <div class="c-text">
+            <h1 class="c-title">Read <span style="color:#81D98F">Workout</span></h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Lose Weight</h2>
+                <p class="card-subtext">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
+                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
+                     eligendi deserunt ea facere saepe alias, rem id?
+                </p>
+                <button class="b-card">Read Article</button>
+            </div>
+            <div class="card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Gain Muscle</h2>
+                <p class="card-subtext">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
+                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
+                     eligendi deserunt ea facere saepe alias, rem id?
+                </p>
+                <button class="b-card">Read Article</button>
+            </div>
+            <div class="card">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+                <h2 class="subtitle">Increase Health</h2>
+                <p class="card-subtext">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
+                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
+                     eligendi deserunt ea facere saepe alias, rem id?
+                </p>
+                <button class="b-card">Read Article</button>
+            </div>
         </div>
     </div>
 </div>   

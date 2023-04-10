@@ -53,3 +53,21 @@ header{
 .content{
     font-family: 'Roboto', sans-serif;    
 }
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.footer{
+    background-color: #EAEAEA;
+}
+
+.footer-ul{
+    text-align: justify;
+    list-style: none;
+    padding: 2% 10% 1% 20%;
+    margin-bottom: 0;
+}
+
+.copy{
+    text-align: center;
+    margin-bottom: 0;
+}
