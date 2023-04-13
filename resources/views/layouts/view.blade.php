@@ -25,7 +25,7 @@
                 <li><a href="" class="nav-link">Trainer Connect</a></li>
                 <li><a href="" class="nav-link">Workouts</a></li>
                 <li><a href="" class="nav-link">Diet</a></li>
-                <li><a href="" class="nav-link login">Login</a></li>
+                <li><a href="{{ url('/login') }}" class="nav-link login">Login</a></li>
             </ul>        
         </div>
     </header>

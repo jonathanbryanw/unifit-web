@@ -1,26 +1,25 @@
 @extends('layouts.view')
 
 @section('css')
-
+<link rel="stylesheet" href="{{asset('css/about-style.css')}}">
 @endsection
 
 @section('js')
 
 @endsection
 
+
+
 @section('content')
 <div class="top">
-    <div class="section">
-        <div class="text">
-            <div class="t-head">
-                <h1 class="title">Get To Know <span style="color:#ffffff">About Us</span></h1>
-                <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id officia veritatis.<br> Nostrum ratione tempore rem, soluta voluptate odio quo nisi delectus recusandae doloribus</p>
-                <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur quos incidunt error officia magni blanditiis earum deserunt cupiditate quibusdam magnam dolorem fugit, obcaecati nostrum veritatis eveniet perspiciatis provident accusamus alias?</p>
-            </div>
+    <div class="c-text">
+        <div class="t-head">
+            <h1 class="c-title"><span style="color:#81D98F">Categories</span> We Provide</h1>
+            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
         </div>
-        <div class="pict">
-            <img src="{{asset('images/patrick.jpg')}}" alt="">
-        </div>
-    </div>
+    </div>    
 </div> 
+
+
+
 @endsection

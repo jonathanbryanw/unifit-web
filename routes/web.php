@@ -22,3 +22,6 @@ Route::get('/about', function () {
 Route::get('/program', function () {
     return view('program');
 });
+Route::get('/login', function () {
+    return view('login');
+});

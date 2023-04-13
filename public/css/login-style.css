@@ -1,0 +1,37 @@
+
+.top{
+    margin: 10vh 7.5vw;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.form{
+    margin: 5vh 0;
+}
+
+.form form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+    max-width: 30vw;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.password-toggle .toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  
