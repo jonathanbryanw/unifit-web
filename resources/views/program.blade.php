@@ -9,6 +9,9 @@
 @endsection
 
 @section('content')
+<script>
+    window.appUrl = '{{ url('/') }}';
+</script>
 <div class="bmi">
     <div class="c-text">
         <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
@@ -17,16 +20,16 @@
     <div class="bmiInput">
         <div class="form">
             <form action="" id="bmiForm">
-                <div>
-                    <label for="weight">Weight: (kg)</label>
+                <div class="weight-con">
+                    <label for="weight">Insert your weight</label>
                     <input type="number" name="weight" id="weight" required>  
                 </div>
-                <div>
-                    <label for="height">Height: (cm)</label>
+                <div class="height-con">
+                    <label for="height">Insert your height</label>
                     <input type="number" name="height" id="height" required>                
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-secondary">Submit</button>                
+                    <button type="submit" class="btn btn-secondary">Calculate</button>                
                     <p id="result"></p>                    
                 </div>
             </form>

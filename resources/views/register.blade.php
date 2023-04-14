@@ -5,14 +5,13 @@
 @endsection
 
 @section('js')
-
 @endsection
 
 @section('content')
 <div class="top">
     <div class="text">
         <div class="t-head">
-            <h1 class="title">Login to <span style="color:#81D98F">your account</span></h1>
+            <h1 class="title">Register <span style="color:#81D98F">your account</span></h1>
         </div>
     </div>
     <div class="form">
@@ -29,7 +28,7 @@
                 <button type="submit" class="btn btn-success">Login</button>
             </div>
             <div>
-                <a href="{{ url('/register') }}" class="nav-link">Don't have an account yet? CLICK HERE!</a>
+                <a href="{{ url('/login') }}" class="nav-link">Already have an account? CLICK HERE!</a>
             </div>
         </form>
     </div>

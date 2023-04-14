@@ -13,14 +13,16 @@ window.onload=function(){
             bmi = Math.round(calWeight/ (calHeight * calHeight))
 
         if(bmi < 18.5){        
-            bmiResult.classList.add('color-green')
-            bmiResult.textContent = 'Skinny'
+            bmiResult.classList.add('color-green');
+            let link = `<a href="${window.appUrl}/register" class="nav-link">CLICK HERE!<br>To see our lose weight programs.</a>`;
+            bmiResult.innerHTML = 'You are skinny.<br>'+ link;            
+            
         }else if(bmi < 25){
             bmiResult.classList.add('color-green')
-            bmiResult.textContent = 'Healthy'        
+            bmiResult.textContent = 'You are healthy.'        
         }else{
             bmiResult.classList.add('color-green')
-            bmiResult.textContent = 'Overweight'        
+            bmiResult.textContent = 'You are overweight.'        
         }
     }
 
