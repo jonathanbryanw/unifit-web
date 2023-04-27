@@ -36,6 +36,13 @@ header{
     color: #81D98F;
 }
 
+.nav-link:active,
+.nav-link.active {
+  color: #81D98F;
+  text-decoration: none;
+}
+  
+
 .logo{
     font-weight: 700;
     margin-right: 200px;
@@ -53,8 +60,8 @@ header{
 .content{
     font-family: 'Roboto', sans-serif;    
     margin-top: 50px;
-
 }
+  
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
