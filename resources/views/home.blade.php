@@ -181,14 +181,52 @@
             <h1 class="c-title">Our <span style="color:#81D98F">Success Stories</span></h1>
             <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
         </div>
-        <div class="banner-6">
-            
+        <div class="story">
+            <div class="story-text">
+                <h3 class="s-title">Felix Fithub</h3>
+                <p class="s-content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem omnis, odit tempora aspernatur maiores, nostrum voluptates facere magnam suscipit necessitatibus, dignissimos at rerum enim ab dolores amet id quisquam culpa?
+                </p>
+            </div>
+            <div class="story-image">
+                <div class="s-images">
+                    <div class="s-image">
+                        <img src="{{asset('images/home-08.png')}}" alt="">
+                        <h3 class="s-image-title">Before</h3>
+                    </div>
+                    <div class="s-image">
+                        <img src="{{asset('images/home-08.png')}}" alt="">
+                        <h3 class="s-image-title">After</h3>
+                    </div>
+                </div>
+                <div class="s-pages">
+                    <div class="s-left"><i class="bi bi-arrow-left" style="color: black"></i></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="s-right"><i class="bi bi-arrow-right" style="color: black"></i></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="section-7">
         <div class="c-text">
             <h1 class="c-title"><span style="color:#81D98F">Our</span> Trainer</h1>
             <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+        </div>
+        <div class="t-section">
+            <div class="t-image">
+                <img src="{{asset('images/home-08.png')}}" alt="">
+            </div>
+            <div class="t-texts">
+                <p class="t-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
+                </p>
+                <button class="t-button">Trainer Connect</button>
+            </div>  
         </div>
     </div>
     <div class="section-8">
