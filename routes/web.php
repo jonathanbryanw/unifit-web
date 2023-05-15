@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/loginold', function () {
+    return view('login-old');
+});
+Route::get('/registerold', function () {
+    return view('register-old');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
