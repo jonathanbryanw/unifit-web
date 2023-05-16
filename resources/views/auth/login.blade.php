@@ -63,7 +63,7 @@
             </div>
         </form>
         <div>
-            <a href="{{ url('/register') }}" class="nav-link">Don't have an account yet? CLICK HERE!</a>
+            <a href="{{ url('/register') }}" class="nav-link" style="display: inline;">Don't have an account yet? CLICK HERE!</a>
         </div>
     {{-- </x-guest-layout> --}}
     </div>

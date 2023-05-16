@@ -24,8 +24,19 @@
                 <li><a href="{{ url('/program') }}" class="nav-link">Find Program</a></li>
                 <li><a href="{{ url('/connect') }}" class="nav-link">Trainer Connect</a></li>
                 <li><a href="" class="nav-link">Workouts</a></li>
-                <li><a href="" class="nav-link">Diet</a></li>
-                <li><a href="{{ url('/login') }}" class="nav-link login">Login</a></li>
+                <li><a href="" class="nav-link last">Diet</a></li>
+                
+                @if (Route::has('login'))
+                    @auth
+                        <li><a href="{{ url('/dashboard') }}" class="nav-link login">Dashboard</a></li>
+                    @else
+                    <li><a href="{{ route('login') }}" class="nav-link login">Log in</a></li>
+
+                        @if (Route::has('register'))
+                            <li><a href="{{ route('register') }}" class="nav-link login">Register</a></li>
+                        @endif
+                    @endauth
+                @endif
             </ul>        
         </div>
     </header>

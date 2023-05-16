@@ -20,6 +20,9 @@ Route::get('/loginold', function () {
 Route::get('/registerold', function () {
     return view('register-old');
 });
+Route::get('/view', function () {
+    return view('view');
+});
 
 Route::get('/', function () {
     return view('welcome');

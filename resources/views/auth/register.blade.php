@@ -65,7 +65,7 @@
             </div>
         </form>
         <div>
-            <a href="{{ route('login') }}" class="nav-link">Already have an account? CLICK HERE!</a>
+            <a href="{{ route('login') }}" class="nav-link" style="display: inline;">Already have an account? CLICK HERE!</a>
         </div>
     </div>
 </div>

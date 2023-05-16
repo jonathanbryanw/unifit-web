@@ -51,9 +51,13 @@ header{
 .logo:hover{
     color: #000000;
 }
+.last{
+    margin-right: 100px;
+}
 
 .login{
-    margin-left: 200px;
+    text-align: right;
+    margin-left: 10px;
 }
 
 
