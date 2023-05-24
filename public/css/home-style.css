@@ -4,13 +4,13 @@
 
 .slider-in{
     position:relative;
-    width:100%;
+    max-width:100%;
     height:55vh;
 }
 
 .slider-in img{
 	display:none;
-	width:100vw;
+	width:calc(100vw - (var(--scrollbar-width)));
     height:55vh;
     opacity: 0.6;
 }
@@ -44,10 +44,10 @@
 
 .slider-dot{
     position: absolute;
-    top: 58vh;
+    top: 52vh;
     z-index: 50;
     display: flex;
-    margin-inline: 47vw;
+    margin-inline: calc(48vw - (var(--scrollbar-width)));
 }  
   
 .dot{
@@ -89,7 +89,7 @@
 
 .text{
     height: 30rem;
-    width: 50vw;
+    width: calc((100vw - (var(--scrollbar-width)))/2);
     padding: 1rem 3rem;
     display: flex;
 }
@@ -114,7 +114,7 @@
     background-color: #454545;
 }
 .pict{
-    width: 50vw;
+    width: calc((100vw - (var(--scrollbar-width)))/2);
     height: 30rem;
     flex-wrap: wrap;
 }

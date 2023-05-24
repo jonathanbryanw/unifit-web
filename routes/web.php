@@ -33,3 +33,16 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/program', function () {
+    return view('program');
+});
+
+
+// MIDDLEWARE IN ROUTES
+// Route::middleware(['auth','admin'])->group(function(){
+
+//})

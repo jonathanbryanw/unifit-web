@@ -6,12 +6,10 @@
 
 @section('js')
 <script src="{{asset('js/bmi-script.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @endsection
 
 @section('content')
-<script>
-    window.appUrl = '{{ url('/') }}';
-</script>
 <div class="bmi">
     <div class="c-text">
         <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
@@ -38,6 +36,10 @@
             <img src="{{asset('images/home-02.png')}}" alt="">
         </div>  
     </div>    
-   
-</div>  
+</div> 
+
+<div class="bmiChart">
+    <canvas id="myChart"></canvas>
+</div>
+<script src="{{asset('js/bmi-chart.js')}}"></script>
 @endsection

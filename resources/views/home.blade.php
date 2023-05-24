@@ -6,6 +6,9 @@
 
 @section('js')
 <script src="{{asset('js/slider-script.js')}}"></script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+</script>
 @endsection
 
 @section('content')

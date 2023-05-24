@@ -79,3 +79,12 @@ input[type="number"]::-webkit-inner-spin-button {
 .pict img{
     max-width: 30vw;
 }
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.bmiChart{
+    margin: auto;
+    height:40vh;
+    width:50vw;
+}
