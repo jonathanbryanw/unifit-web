@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+.section{
+    margin: 2vh 6vw;  
+}
+.text{
+    width: calc((100vw - (var(--scrollbar-width)))/2);
+    padding: 1rem 0 1rem 15vw;
+    display: flex;
+}
+
+.title{
+    font-weight: 700;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+}
+
+.card{
+    padding: 10px 2%;
+    border: none;
+}
+
+.subtitle{
+    height:200%;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.b-card{
+    padding: 5px 10px;
+    color: white;
+    background-color: #454545;
+    width: fit-content;
+    align-self: center;
+}

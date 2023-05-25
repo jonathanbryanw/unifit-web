@@ -1,6 +1,9 @@
 .top{
     margin: 0 6vw;
 }
+.c-text{
+    display: flex;
+}
 
 .c-title{
     font-style: italic;

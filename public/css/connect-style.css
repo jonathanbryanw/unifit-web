@@ -44,5 +44,25 @@
     background-color: #81D98F;
     color: #fff;
     border-radius: 0 4px 4px 0;
-  }
-  
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.content-2{
+    margin: 0 6vw;
+}
+
+.images{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.subtext{
+    text-align: center;
+}

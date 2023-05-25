@@ -27,6 +27,95 @@
         </button>
     </div>
 </div>
+<div class="content-2">
+    <div class="text">
+        <h3 class="subtitle">Lose Weight Trainer</h3>
+    </div>
+    <div class="images">
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 1</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 2</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 3</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 4</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 5</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 6</p>
+        </div>
+    </div>
+    <div class="text">
+        <h3 class="subtitle">Gain Muscle Trainer</h3>
+    </div>
+    <div class="images">
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 1</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 2</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 3</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 4</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 5</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 6</p>
+        </div>
+    </div>
+    <div class="text">
+        <h3 class="subtitle">Maintain Weight (Increase Overall Fitness Health) Trainer</h3>
+    </div>
+    <div class="images">
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 1</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 2</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 3</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 4</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 5</p>
+        </div>
+        <div class="image">
+            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <p class="subtext">Name 6</p>
+        </div>
+    </div>
+</div>
 
 
 

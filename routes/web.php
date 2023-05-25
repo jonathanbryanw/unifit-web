@@ -40,6 +40,15 @@ Route::get('/about', function () {
 Route::get('/program', function () {
     return view('program');
 });
+Route::get('/connect', function () {
+    return view('connect');
+});
+Route::get('/diet', function () {
+    return view('diet');
+});
+Route::get('/workout', function () {
+    return view('workout');
+});
 
 
 // MIDDLEWARE IN ROUTES
