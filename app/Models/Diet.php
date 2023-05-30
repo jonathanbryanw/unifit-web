@@ -11,8 +11,6 @@ class Diet extends Model
 
     protected $table = 'diets';
 
-    public $timestamps = false;
-
     protected $fillable = ['name', 'program_id', 'description', 'user_id', 'photo'];
 
     public function program(){

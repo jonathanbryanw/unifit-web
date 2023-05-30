@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WorkoutProgressController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,8 +51,10 @@ Route::get('/workout', function () {
     return view('workout');
 });
 
+Route::resource('/workoutp', WorkoutProgressController::class);
 
-// MIDDLEWARE IN ROUTES
+
+// HOW TO ADD MIDDLEWARE IN ROUTES
 // Route::middleware(['auth','admin'])->group(function(){
 
 //})

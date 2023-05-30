@@ -11,11 +11,12 @@ class Workout extends Model
 
     protected $table = 'workouts';
 
-    public $timestamps = false;
-
-    protected $fillable = ['name', 'program_id', 'description', 'user_id', 'photo'];
+    protected $fillable = ['name', 'program_id', 'description', 'photo'];
 
     public function program(){
         return $this->belongsTo(Program::class);
+    }
+    public function workoutdetail(){
+        return $this->hasMany(WorkoutDetail::class);
     }
 }
