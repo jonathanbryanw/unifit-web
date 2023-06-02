@@ -14,14 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trainers', function (Blueprint $table) {
-            $table->id();
-            $table->longText('description');
-            $table->unsignedBigInteger('user_id')->default(1);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('program_id')->default(1);
-            $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
-            $table->string('category');
-            $table->string('photo');
+            $table->id('TrainerID');
+            $table->longText('TrainerDescription');
+            $table->unsignedBigInteger('UserID')->default(1);
+            $table->foreign('UserID')->references('id')->on('users')->onDelete('cascade');
+            $table->string('TrainerCategory');
+            $table->string('TrainerImage');
             $table->timestamps();
         });
     }
