@@ -20,7 +20,7 @@ class WorkoutSeeder extends Seeder
             'name' => 'LEAN & FIT',
             'program_id' => 1,
             'description' => "The 'Lean & Fit' program in UniFit is a dynamic and successful exercise routine created to assist people in achieving their weight loss objectives while enhancing general fitness. Strength training, cardiovascular activities, and core exercises are all included in this program's mix of exercises that target the entire body. The 'Lean & Fit' program maximizes calorie burn, encourages fat loss, and speeds up metabolism by using compound exercises and HIIT methods. The 'Lean & Fit' program offers a thorough strategy to help you shape a slim body, improve your general fitness level, and leave you feeling inspired and energized, whether you're a novice or an experienced fitness enthusiast.",
-            'photo' => 'workout1.jpg',
+            'image' => 'workout1.jpg',
             'created_at' => Date::now(),
             'updated_at' => Date::now()
         ]);

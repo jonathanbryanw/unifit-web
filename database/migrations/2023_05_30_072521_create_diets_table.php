@@ -19,9 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('program_id')->default(1);
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
             $table->longText('description');
-            $table->unsignedBigInteger('user_id')->default(1);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('photo');
+            $table->string('image');
+            $table->string('category');
             $table->timestamps();
         });
     }

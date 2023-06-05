@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('workouts', function (Blueprint $table) {
-            $table->id('WorkoutID');
-            $table->string('WorkoutName');
-            $table->unsignedBigInteger('ProgramID')->default(1);
-            $table->foreign('ProgramID')->references('ProgramID')->on('programs')->onDelete('cascade');
-            $table->longText('WorkoutDescription');
-            $table->string('WorkoutImage');
+            $table->id();
+            $table->string('name');
+            $table->unsignedBigInteger('program_id')->default(1);
+            $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
+            $table->longText('description');
+            $table->string('image');
             $table->timestamps();
         });
     }

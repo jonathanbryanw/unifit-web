@@ -23,7 +23,8 @@ class UserSeeder extends Seeder
             'password' => bcrypt("12345678"),
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
-            'role_id' => 1
+            'role_id' => 1,
+            'program_id' => 3
         ]);
         DB::table('users')->insert([
             'name' => 'Member1',
@@ -31,7 +32,8 @@ class UserSeeder extends Seeder
             'password' => bcrypt("12345678"),
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
-            'role_id' => 2
+            'role_id' => 2,
+            'program_id' => 1
         ]);
         DB::table('users')->insert([
             'name' => 'Trainer1',
@@ -39,7 +41,8 @@ class UserSeeder extends Seeder
             'password' => bcrypt("12345678"),
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
-            'role_id' => 3
+            'role_id' => 3,
+            'program_id' => 2
         ]);
     }
 }
