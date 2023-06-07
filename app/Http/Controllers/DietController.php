@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WorkoutProgress;
+use App\Models\Diet;
 use Illuminate\Http\Request;
 
-class WorkoutProgressController extends Controller
+class DietController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class WorkoutProgressController extends Controller
      */
     public function index()
     {
-        $workoutprogress = WorkoutProgress::all();
-        return view('workoutprogress', [
-            'workoutprogress' => $workoutprogress
+        $diets = Diet::all();
+        return view('diet', [
+            'diets' => $diets
         ]);
     }
 
@@ -49,7 +49,8 @@ class WorkoutProgressController extends Controller
      */
     public function show($id)
     {
-        //
+        $diet = Diet::find($id);
+        return view('show-diet', compact('diet'));
     }
 
     /**

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DietController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WorkoutController;
 use App\Http\Controllers\WorkoutProgressController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,14 +46,12 @@ Route::get('/program', function () {
 Route::get('/connect', function () {
     return view('connect');
 });
-Route::get('/diet', function () {
-    return view('diet');
-});
 Route::get('/workout', function () {
     return view('workout');
 });
 
-Route::resource('/workoutp', WorkoutProgressController::class);
+Route::resource('/diet', DietController::class);
+Route::resource('/workout', WorkoutController::class);
 
 
 // HOW TO ADD MIDDLEWARE IN ROUTES

@@ -1,0 +1,33 @@
+.header{
+    position: absolute;
+    width: 1920px;
+    height: 355px;
+    top: 50px;
+    background: linear-gradient(180deg, rgba(129, 217, 143, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 15vh 38vw;
+    color: #5A5A5A;
+}
+.section{
+    display: flex;
+    margin: 355px 6vw 100px 6vw;  
+}
+
+img{
+    width: 600px;
+    max-height: 600px;
+    margin-top: 5vh;
+}
+
+.text{
+    margin: 0 4vw;
+}
+
+.subtitle{
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.subtext{
+    margin-top: 20px;
+    font-size: 20px;
+}
