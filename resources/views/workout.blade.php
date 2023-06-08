@@ -9,6 +9,14 @@
 @endsection
 
 @section('content')
+@if(session('error') && session('login_redirect'))
+    <script>
+        window.onload = function() {
+            alert("{{ session('error') }}");
+            window.location.href = "{{ route('login') }}";
+        }
+    </script>
+@endif
 <div class="section">
     <div class="text">
         <div class="t-head">
@@ -33,7 +41,7 @@
                         <p class="subtext">
                             {{ $text }}.
                         </p>
-                        <a class="b-card" href="/workout/{{ $workout->id }}" role="button">Read Recipe</a>
+                        <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                     </div>
                 @else
                     <div class="card">
@@ -60,7 +68,7 @@
                         <p class="subtext">
                             {{ $text }}.
                         </p>
-                        <a class="b-card" href="/workout/{{ $workout->id }}" role="button">Read Recipe</a>
+                        <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                     </div>
                 @else
                     <div class="card">
@@ -87,7 +95,7 @@
                         <p class="subtext">
                             {{ $text }}.
                         </p>
-                        <a class="b-card" href="/workout/{{ $workout->id }}" role="button">Read Recipe</a>
+                        <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                     </div>
                 @else
                     <div class="card">
@@ -97,6 +105,5 @@
             @endforeach
         </div>
     </div>
-    
 </div>
 @endsection

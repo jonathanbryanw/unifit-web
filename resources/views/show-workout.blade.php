@@ -5,7 +5,26 @@
 @endsection
 
 @section('js')
-
+<script>
+    $(document).ready(function() {
+        $('.checkButton').on('click', function() {
+            $(this).toggleClass('completed');
+            if ($(this).hasClass('completed')) {
+                $(this).text('Done!');
+            } else {
+                $(this).text('Do!');
+            }
+        });
+        $('.finish').on('click', function() {
+            $('.checkButton').addClass('completed');
+            $('.checkButton').text('Done!');
+        });
+        $('.restart').on('click', function() {
+            $('.checkButton').removeClass('completed');
+            $('.checkButton').text('Do!');
+        });
+    });
+</script>
 @endsection
 
 @section('content')
@@ -32,32 +51,50 @@
             WORKOUT PROGRAM<br>
             <b>{{ $workout->name }}</b><br>
             {{$total}} TIMES A WEEK<br>
-            CHECKLIST
+            CHECKLIST {{$user}}
             </h2>
             <p class="subtext">{{$workout->description}}</p>
+        </div>
+        <div class="buttons">
+            <button class="b-top finish" style="margin-bottom: 10px">Click to <b>finish</b> week</button>
+            <button class="b-top restart">Click to <b>restart</b> week</button>
         </div>
         <div class="checklist">
             @php
                 $session = 1;
                 $sessionc = 0;
             @endphp
-            <p>Day 1: </p> 
+            <p class="day-title">Day 1: </p> 
+            <div class="day">
             @foreach ($workout->workoutdetail as $workoutd)
                 @php                  
                 if($workoutd->session == $session){
                     $sessionc+=1;
                 }elseif ((($workoutd->session) + 1) != $session && $sessionc > 1) {
-                    $sessionc = 0;
+                    $sessionc = 1;
                     $session+=1;
-                    echo '<p>Day ' . $session . ':</p>';
+                    echo '</div>';
+                    echo '<p class="day-title">Day ' . $session . ':</p>';
+                    echo '<div class="day">';                    
                 }elseif ((($workoutd->session) + 1)  != $session) {
                     $session +=1;
-                    $sessionc = 0;
-                    echo '<p>Day ' . $session . ':</p>';
+                    $sessionc = 1;
+                    echo '</div>';
+                    echo '<p class="day-title">Day ' . $session . ':</p>';
+                    echo '<div class="day">';                    
                 }
+                if($user == 0){
+                    echo '<div class="work">';  
+                    echo '<p class="workTitle">'.$sessionc.'. '.$workoutd->title.'</p>';
+                    echo '<button class="checkButton">Do!</button>';
+                    echo '</div>';
+                }else{
+                    echo '<p class="workTitle">'.$sessionc.'. '.$workoutd->title.'</p>'; 
+                }                
                 @endphp
-                <p>{{$workoutd->title}}</p>
+                
             @endforeach
+            </div>
         </div>
     </div>
 @endsection

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class WorkoutController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth')->only('show');
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -49,8 +53,21 @@ class WorkoutController extends Controller
      */
     public function show($id)
     {
-        $workout = Workout::find($id);
-        return view('show-workout', compact('workout'));
+        if(auth()->check()){
+            $workout = Workout::find($id);
+            $user = auth()->user()->id;
+            return view('show-workout', [
+               'workout' => $workout,
+               'user' => $user
+            ]);
+        }else{
+            $workout = Workout::find($id);
+            $user = 0;
+            return view('show-workout', [
+               'workout' => $workout,
+               'user' => $user
+            ]);
+        }
     }
 
     /**
