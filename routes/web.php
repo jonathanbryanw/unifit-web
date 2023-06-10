@@ -46,12 +46,10 @@ Route::get('/program', function () {
 Route::get('/connect', function () {
     return view('connect');
 });
-Route::get('/workout', function () {
-    return view('workout');
-});
 
 Route::resource('/diet', DietController::class);
 Route::resource('/workout', WorkoutController::class);
+Route::resource('/workoutprogress', WorkoutProgressController::class)->only(['update']);
 
 
 // HOW TO ADD MIDDLEWARE IN ROUTES

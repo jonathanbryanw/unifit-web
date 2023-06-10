@@ -77,9 +77,9 @@ class WorkoutDetailSeeder extends Seeder
                 'title' => 'Dumbbell Chest Press: 3 sets of 12 reps.'    
             ],
             [
-            'workout_id' => 1,
-            'session' => 3,
-            'title' => 'Romanian Deadlifts: 3 sets of 10 reps.'
+                'workout_id' => 1,
+                'session' => 3,
+                'title' => 'Romanian Deadlifts: 3 sets of 10 reps.'
             ],
             [
                 'workout_id' => 1,
