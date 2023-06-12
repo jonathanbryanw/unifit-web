@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DietController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TrainerController;
 use App\Http\Controllers\WorkoutController;
 use App\Http\Controllers\WorkoutProgressController;
 use Illuminate\Support\Facades\Route;
@@ -43,12 +44,11 @@ Route::get('/about', function () {
 Route::get('/program', function () {
     return view('program');
 });
-Route::get('/connect', function () {
-    return view('connect');
-});
+
 
 Route::resource('/diet', DietController::class);
 Route::resource('/workout', WorkoutController::class);
+Route::resource('/trainer', TrainerController::class);
 Route::resource('/workoutprogress', WorkoutProgressController::class)->only(['update']);
 
 

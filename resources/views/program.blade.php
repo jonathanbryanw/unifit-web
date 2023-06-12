@@ -13,7 +13,7 @@
 <div class="bmi">
     <div class="c-text">
         <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
-        <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+        <h3 class="subtitle">Insert your body weight and height to find the perfect personalized fitness program for you!</h3>
     </div>
     <div class="bmiInput">
         <div class="form">

@@ -13,7 +13,6 @@
     <div class="section">
         <div class="image">
             <img src="{{asset('images/'.$diet->image)}}" alt="">
-
         </div>
         <div class="text">
             <h1 class="subtitle">{{ $diet->name }}</h1>

@@ -19,4 +19,7 @@ class Program extends Model
     public function workout(){
         return $this->hasMany(Workout::class);
     }
+    public function user(){
+        return $this->hasMany(User::class);
+    }
 }

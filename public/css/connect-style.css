@@ -10,7 +10,7 @@
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
-.content-1{
+/* .content-1{
     position: relative;
     width: 100vw;
     height: 100px;
@@ -44,25 +44,40 @@
     background-color: #81D98F;
     color: #fff;
     border-radius: 0 4px 4px 0;
-}
+
+
+
+} */
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
-.content-2{
+.content-1{
     margin: 0 6vw;
 }
 
-.images{
+.trainers{
     display: flex;
     justify-content: space-between;
 }
 
+.image{
+    border-radius: 50%;
+    overflow: hidden;
+}
 .image img{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+a{
+    text-decoration: none;
 }
 
 .subtext{
     text-align: center;
+    text-decoration: none;
+    color: #5A5A5A;
+    margin-top: 5px;
 }

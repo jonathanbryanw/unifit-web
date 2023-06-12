@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function trainer(){
+        return $this->hasOne(Trainer::class);
+    }
+
+    public function program(){
+        return $this->belongsTo(Program::class);
+    }
+
+    public function weightDetail(){
+        return $this->hasMany(WeightDetail::class);
+    }
 }
