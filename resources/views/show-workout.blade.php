@@ -157,10 +157,10 @@
         </div>
     </div>
     @if ($user == 0)
-    <div class="bg-warning sticky-bottom p-3">
-      <h4 class="text-center">You are not logged in. Progress will not be saved.</h4>
-    </div>
-  @endif
+        <div class="bg-warning sticky-bottom p-3">
+        <h4 class="text-center">You are not logged in. Progress will not be saved.</h4>
+        </div>
+    @endif
 @endsection
 
 

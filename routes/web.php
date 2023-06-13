@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\DietController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\TrainerController;
+use App\Http\Controllers\WeightDetailController;
 use App\Http\Controllers\WorkoutController;
 use App\Http\Controllers\WorkoutProgressController;
 use Illuminate\Support\Facades\Route;
@@ -41,11 +43,10 @@ require __DIR__.'/auth.php';
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/program', function () {
-    return view('program');
-});
 
 
+Route::resource('/program', WeightDetailController::class)->only(['index']);
+Route::resource('/category', ProgramController::class)->only(['show']);
 Route::resource('/diet', DietController::class);
 Route::resource('/workout', WorkoutController::class);
 Route::resource('/trainer', TrainerController::class);

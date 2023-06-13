@@ -14,15 +14,17 @@ window.onload=function(){
 
         if(bmi < 18.5){        
             bmiResult.classList.add('color-green');
-            let link = `<a href="${window.appUrl}/register" class="nav-link">CLICK HERE!<br>To see our lose weight programs.</a>`;
+            let link = `<a href="/category/3" class="nav-link">CLICK HERE!<br>To see our gain muscle programs.</a>`;
             bmiResult.innerHTML = 'You are skinny.<br>'+ link;            
             
         }else if(bmi < 25){
-            bmiResult.classList.add('color-green')
-            bmiResult.textContent = 'You are healthy.'        
+            bmiResult.classList.add('color-green');
+            let link = `<a href="/category/2" class="nav-link">CLICK HERE!<br>To see our maintain weight (increase overall fitness health) programs.</a>`;
+            bmiResult.innerHTML = 'You are healthy.<br>'+ link;     
         }else{
-            bmiResult.classList.add('color-green')
-            bmiResult.textContent = 'You are overweight.'        
+            bmiResult.classList.add('color-green');
+            let link = `<a href="/category/1" class="nav-link">CLICK HERE!<br>To see our lose weight programs.</a>`;
+            bmiResult.innerHTML = 'You are overweight.<br>'+ link;        
         }
     }
 

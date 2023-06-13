@@ -7,6 +7,25 @@
 @section('js')
 <script src="{{asset('js/bmi-script.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{{-- <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: '/your-route-url',
+            type: 'POST',
+            data: {
+                myVariable: myVariable
+            },
+            success: function(response) {
+                // Handle the success response from the controller
+                console.log(response);
+            },
+            error: function(xhr) {
+                // Handle any errors that occur during the request
+                console.error(xhr.responseText);
+            }
+        });
+    });
+</script> --}}
 @endsection
 
 @section('content')
@@ -20,7 +39,7 @@
             <form action="" id="bmiForm">
                 <div class="weight-con">
                     <label for="weight">Insert your weight</label>
-                    <input type="number" name="weight" id="weight" required>  
+                    <input type="number" name="weight" id="weight" step="any" required>  
                 </div>
                 <div class="height-con">
                     <label for="height">Insert your height</label>
@@ -39,7 +58,20 @@
 </div> 
 
 <div class="bmiChart">
+    <div class="w-text">
+        <h1 class="w-title">Your <span style="color:#81D98F">Weight Progress</span></h1>
+    </div>
+    @if ($weightdetails->isEmpty())
+        <div class="bg-secondary z-2 position-absolute w-50 p-3">
+            <h4 class="text-center">You need to insert your weight first.</h4>
+        </div>
+    @endif
     <canvas id="myChart"></canvas>
 </div>
-<script src="{{asset('js/bmi-chart.js')}}"></script>
+@if ($user == 0)
+    <div class="bg-warning sticky-bottom p-3">
+        <h4 class="text-center">You are not logged in. Your weight will not be saved.</h4>
+    </div>
+@endif
+<script src="{{asset('js/bmi-chart.js')}}" data-chart-data="{{ json_encode($weightdetails) }}"></script>
 @endsection

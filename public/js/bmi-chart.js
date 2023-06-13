@@ -1,13 +1,26 @@
 const ctx = document.getElementById('myChart');
-  
+const chartData = JSON.parse(document.currentScript.getAttribute('data-chart-data'));
+
+const datasets = [{
+    data: []
+}];
+
+chartData.forEach(function(item) {
+  const date = new Date(item.updated_at);
+  // const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });
+  // ^^ For Month-Date-Year
+  const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long' }); 
+  const dataItem = {
+      x: formattedDate,
+      y: item.weight
+  };
+  datasets[0].data.push(dataItem);
+});
+
 new Chart(ctx, {
     type: 'line',
     data: {
-        datasets: [{
-        data: [{x: '29 July', y: 60.8}, {x: '30 July', y: 60.2},
-               {x: '31 July', y: 60.2}, {x: '1 Aug', y: 59.8},
-               {x: '2 Aug', y: 59.5}, {x: '3 Aug', y: 60},]
-        }]
+        datasets: datasets
     },
     options: {
         animation: false,

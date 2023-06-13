@@ -1,0 +1,66 @@
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+.section{
+    margin: 2vh 6vw;  
+}
+
+.trainers{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.image img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.t-subtext{
+    text-align: center;
+    text-decoration: none;
+    color: #5A5A5A;
+    margin-top: 5px;
+}
+
+.b-card{
+    padding: 5px 10px;
+    color: white;
+    background-color: #454545;
+    width: fit-content;
+    align-self: center;
+    text-decoration: none;
+}
+
+.title{
+    font-weight: 700;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+}
+
+.card{
+    padding: 10px 2%;
+    border: none;
+    max-width: 30vw;
+}
+
+.card img{
+    width: 425px;
+    height: 300px;
+}
+
+.subtitle{
+    margin-top: 10px;
+    font-weight: 400;
+}
+

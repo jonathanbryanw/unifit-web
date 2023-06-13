@@ -82,10 +82,16 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
-
+.w-text{
+    text-align: center;
+}
 
 .bmiChart{
-    margin: auto;
+    margin: 10px auto 100px auto;
     height:40vh;
     width:50vw;
+}
+
+#myChart{
+    margin-left: 100px;
 }
