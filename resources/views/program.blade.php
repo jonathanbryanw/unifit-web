@@ -7,25 +7,75 @@
 @section('js')
 <script src="{{asset('js/bmi-script.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-{{-- <script>
+<script>
     $(document).ready(function() {
-        $.ajax({
-            url: '/your-route-url',
-            type: 'POST',
-            data: {
-                myVariable: myVariable
-            },
-            success: function(response) {
-                // Handle the success response from the controller
-                console.log(response);
-            },
-            error: function(xhr) {
-                // Handle any errors that occur during the request
-                console.error(xhr.responseText);
+        var isLoggedIn = {!! json_encode($user) !!};
+
+        $('#bmiForm').submit(function(event) {
+            if (isLoggedIn) {
+                var currentDetail = @json($weightdetails);
+                const currentDate = new Date().toISOString().slice(0, 10);
+                const existingRecord = currentDetail.find(record => record.updated_at.includes(currentDate));
+                if (existingRecord) {
+                    var weight= $('#weight').val();
+                    var user = @json($user);
+                    var weight_id = existingRecord.id;
+                    // updateWeightDetail(weight, user, currentDate, weight_id);                    
+                    console.log('Update');
+                } else {
+                    var weight= $('#weight').val();
+                    var user = @json($user);
+                    // insertWeightDetail(weight, user);
+                    console.log('Weight Detail inserted successfully.');
+                }
             }
         });
+
+        function insertWeightDetail(weight, user_id) {
+            $.ajax({
+                url: '/program',
+                type: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    weight: weight,
+                    user: user_id
+                },
+                success: function(response) {
+                    console.log('Weight Detail inserted successfully.');
+                    updateChart(response.weightdetails);
+                },
+                error: function(xhr) {
+                    console.error('Error inserting Weight Detail:', xhr.responseText);
+                }
+            });
+        }
+
+        function updateWeightDetail(weight, weight_id) {
+            $.ajax({
+                url: '/program'+weight_id,
+                type: 'PUT',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    weight: weight
+                },
+                success: function(response) {
+                    console.log('Weight Detail updated successfully.');
+                    updateChart(response.weightdetails);
+                },
+                error: function(xhr) {
+                    console.error('Error updating Weight Detail:', xhr.responseText);
+                }
+            });
+        }
+
+        function updateChart(chartData) {
+            insertChart(chartData);
+            const chart = Chart.getChart('myChart');
+            chart.update();
+            $('#weightMessage').hide();
+        }
     });
-</script> --}}
+</script>
 @endsection
 
 @section('content')
@@ -46,7 +96,7 @@
                     <input type="number" name="height" id="height" required>                
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-secondary">Calculate</button>                
+                    <button type="submit" id="calcButton" class="btn btn-secondary">Calculate</button>                
                     <p id="result"></p>                    
                 </div>
             </form>
@@ -61,8 +111,8 @@
     <div class="w-text">
         <h1 class="w-title">Your <span style="color:#81D98F">Weight Progress</span></h1>
     </div>
-    @if ($weightdetails->isEmpty())
-        <div class="bg-secondary z-2 position-absolute w-50 p-3">
+    @if ($user != 0 && $weightdetails->isEmpty())
+        <div id="weightMessage" class="bg-secondary z-2 position-absolute w-50 p-3">
             <h4 class="text-center">You need to insert your weight first.</h4>
         </div>
     @endif

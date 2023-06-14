@@ -5,17 +5,21 @@ const datasets = [{
     data: []
 }];
 
-chartData.forEach(function(item) {
-  const date = new Date(item.updated_at);
-  // const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });
-  // ^^ For Month-Date-Year
-  const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long' }); 
-  const dataItem = {
-      x: formattedDate,
-      y: item.weight
-  };
-  datasets[0].data.push(dataItem);
-});
+insertChart(chartData);
+
+function insertChart(chartData) {
+  chartData.forEach(function(item) {
+    const date = new Date(item.updated_at);
+    // const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });
+    // ^^ For Month-Date-Year
+    const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long' }); 
+    const dataItem = {
+        x: formattedDate,
+        y: item.weight
+    };
+    datasets[0].data.push(dataItem);
+  });
+}
 
 new Chart(ctx, {
     type: 'line',
