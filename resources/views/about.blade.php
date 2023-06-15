@@ -11,17 +11,16 @@
 
 
 @section('content')
+<h3 class="header"></h3>
 <div class="top">
     <div class="c-text">
         <div class="t-head">
-            <h1 class="c-title">Get To Know<span style="color:#81D98F">About Us</span></h1>
-            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+            <h1 class="c-title">Get To Know<span style="color:#81D98F"> About Us</span></h1>
             <p class="subtext">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veritatis fuga, dicta ut voluptatum dolorem nisi ab,<br> inventore quo aliquam hic commodi officia sed asperiores ipsum perspiciatis, consectetur deleniti eaque.
-            </p>
+                Our goal at UniFit is to empower people on their fitness journey by offering a centralized platform that integrates exercise routines, food advice, links to trainers, and interactive features. With the help of a team of committed professionals, we work to provide a welcoming community where users can access tailored resources and qualified advice, empowering them to realize their full potential, achieve their health and fitness objectives, and live happier, more fulfilling lives.            </p>
         </div>
         <div class="img-top">
-            <img src="{{asset('images/odan.jpg')}}" alt="">
+            <img src="{{asset('images/about-01.png')}}" alt="">
         </div>
     </div>   
 </div> 

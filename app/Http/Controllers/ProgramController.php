@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Diet;
 use App\Models\Program;
 use App\Models\Trainer;
+use App\Models\User;
 use App\Models\Workout;
 use Illuminate\Http\Request;
 
@@ -85,7 +86,13 @@ class ProgramController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $program = $request->input('program');
+    
+        $user = User::findOrFail($id);
+    
+        $user->program_id = $program;
+        $user->save();
+    
     }
 
     /**

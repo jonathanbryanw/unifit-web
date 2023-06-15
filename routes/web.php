@@ -45,8 +45,8 @@ Route::get('/about', function () {
 });
 
 
-Route::resource('/program', WeightDetailController::class)->only(['index','store']);
-Route::resource('/category', ProgramController::class)->only(['show']);
+Route::resource('/program', WeightDetailController::class)->only(['index','store','update']);
+Route::resource('/category', ProgramController::class)->only(['show','update']);
 Route::resource('/diet', DietController::class);
 Route::resource('/workout', WorkoutController::class);
 Route::resource('/trainer', TrainerController::class);

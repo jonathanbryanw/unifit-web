@@ -55,15 +55,16 @@ class WeightDetailController extends Controller
             'weight' => 'required|integer',
             'user' => 'required|integer',
         ]);
-        $weightdetail = WeightDetail::create([
-            'weight' => $request->weight,
-            'user' => $request->user,
-        ]);
+        $newWeightDetail =new WeightDetail();
+        $newWeightDetail->weight = $request->weight;
+        $newWeightDetail->user_id = $request->user;
+        $newWeightDetail->save();
 
         $weightdetails = WeightDetail::where('user_id', $request->user)
-                                        ->get();
+                                    ->get();
         return response()->json([
             'weightdetails' => $weightdetails,
+            'user' => $request->user
         ]);
     }
 
@@ -99,21 +100,19 @@ class WeightDetailController extends Controller
     public function update(Request $request, $id)
     {
         $weight = $request->input('weight');
-        $user = $request->input('user');
-        $currentDate = $request->input('currentDate');
     
-        // Find the weight detail record by ID
         $weightDetail = WeightDetail::findOrFail($id);
     
-        // Update the weight and other properties
         $weightDetail->weight = $weight;
-        // Update other properties as needed
-    
-        // Save the changes to the database
         $weightDetail->save();
+
+        $weightdetails = WeightDetail::where('user_id', $request->user)
+                                        ->get();
     
-        // Return a response or redirect as desired
-        return response()->json(['weightdetails' => $weightDetail]);
+        return response()->json([
+            'weightdetails' => $weightdetails,
+            'user' => $request->user
+        ]);
     }
 
     /**

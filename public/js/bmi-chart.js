@@ -8,6 +8,8 @@ const datasets = [{
 insertChart(chartData);
 
 function insertChart(chartData) {
+  datasets[0].data = [];
+  
   chartData.forEach(function(item) {
     const date = new Date(item.updated_at);
     // const formattedDate = date.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' });

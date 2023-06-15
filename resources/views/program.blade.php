@@ -5,28 +5,32 @@
 @endsection
 
 @section('js')
-<script src="{{asset('js/bmi-script.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <script>
     $(document).ready(function() {
         var isLoggedIn = {!! json_encode($user) !!};
+        var newWeightDetails = [];
 
         $('#bmiForm').submit(function(event) {
             if (isLoggedIn) {
                 var currentDetail = @json($weightdetails);
                 const currentDate = new Date().toISOString().slice(0, 10);
                 const existingRecord = currentDetail.find(record => record.updated_at.includes(currentDate));
+                const newExistingRecord = newWeightDetails.find(record => record.updated_at.includes(currentDate));
                 if (existingRecord) {
                     var weight= $('#weight').val();
                     var user = @json($user);
                     var weight_id = existingRecord.id;
-                    // updateWeightDetail(weight, user, currentDate, weight_id);                    
-                    console.log('Update');
-                } else {
+                    updateWeightDetail(weight, weight_id, user);                    
+                } else if(newExistingRecord){
                     var weight= $('#weight').val();
                     var user = @json($user);
-                    // insertWeightDetail(weight, user);
-                    console.log('Weight Detail inserted successfully.');
+                    var weight_id = newExistingRecord.id;
+                    updateWeightDetail(weight, weight_id, user);
+                } else{
+                    var weight= $('#weight').val();
+                    var user = @json($user);
+                    insertWeightDetail(weight, user);
                 }
             }
         });
@@ -43,6 +47,7 @@
                 success: function(response) {
                     console.log('Weight Detail inserted successfully.');
                     updateChart(response.weightdetails);
+                    newWeightDetails = response.weightdetails;
                 },
                 error: function(xhr) {
                     console.error('Error inserting Weight Detail:', xhr.responseText);
@@ -50,17 +55,19 @@
             });
         }
 
-        function updateWeightDetail(weight, weight_id) {
+        function updateWeightDetail(weight, weight_id, user_id) {
             $.ajax({
-                url: '/program'+weight_id,
+                url: '/program/'+weight_id,
                 type: 'PUT',
                 data: {
                     _token: '{{ csrf_token() }}',
-                    weight: weight
+                    weight: weight,
+                    user: user_id
                 },
                 success: function(response) {
                     console.log('Weight Detail updated successfully.');
                     updateChart(response.weightdetails);
+                    newWeightDetails = response.weightdetails;
                 },
                 error: function(xhr) {
                     console.error('Error updating Weight Detail:', xhr.responseText);
@@ -74,8 +81,11 @@
             chart.update();
             $('#weightMessage').hide();
         }
+
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{asset('js/bmi-script.js')}}" data-is-logged-in="{{$user}}"></script>
 @endsection
 
 @section('content')
