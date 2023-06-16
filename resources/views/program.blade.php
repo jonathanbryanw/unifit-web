@@ -12,7 +12,7 @@
         var newWeightDetails = [];
 
         $('#bmiForm').submit(function(event) {
-            if (isLoggedIn) {
+            if (isLoggedIn != 0) {
                 var currentDetail = @json($weightdetails);
                 const currentDate = new Date().toISOString().slice(0, 10);
                 const existingRecord = currentDetail.find(record => record.updated_at.includes(currentDate));
@@ -46,6 +46,7 @@
                 },
                 success: function(response) {
                     console.log('Weight Detail inserted successfully.');
+                    console.log(isLoggedIn);
                     updateChart(response.weightdetails);
                     newWeightDetails = response.weightdetails;
                 },
@@ -76,6 +77,7 @@
         }
 
         function updateChart(chartData) {
+            console.log(isLoggedIn);
             insertChart(chartData);
             const chart = Chart.getChart('myChart');
             chart.update();

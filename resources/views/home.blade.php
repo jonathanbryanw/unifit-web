@@ -40,9 +40,9 @@
         <div class="text">
             <div class="t-head">
                 <h1 class="title">What is <span style="color:#81D98F">UniFit?</span></h1>
-                <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id officia veritatis.<br> Nostrum ratione tempore rem, soluta voluptate odio quo nisi delectus recusandae doloribus</h2>
-                <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur quos incidunt error officia magni blanditiis earum deserunt cupiditate quibusdam magnam dolorem fugit, obcaecati nostrum veritatis eveniet perspiciatis provident accusamus alias?</p>
-                <button class="learn">Learn More</button>
+                <h2 class="subtitle">For all of your fitness requirements, UniFit is the place to be.</h2>
+                <p class="t-content">UniFit transforms the way you achieve your health goals with a unified strategy that integrates multiple exercise activities, workout regimens, food advice, and a trainer search platform. Experience the ease of custom training plans created for your specific profile, using your height and weight to suggest the ideal program. Visual progress charts help you stay motivated and keep tabs on your progress, and the thorough workout checklist routines make sure you never miss a step. You gain a chance to direct your exercise journey and realize your best potential thanks to UniFit.</p>
+                <a class="b-card" href="/about/" role="button">Learn More</a>
             </div>
         </div>
         <div class="pict">
@@ -56,14 +56,11 @@
         <div class="text">
             <div class="t-head">
                 <h1 class="title">Take <span style="color:#81D98F">Health Advice</span></h1>
-                <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id officia veritatis.<br> Nostrum ratione tempore rem, soluta voluptate odio quo nisi delectus recusandae doloribus</h2>
-                <ul class="content">
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Consequatur quos incidunt error officia magni blanditiis earum deserunt cupiditate</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Consequatur quos incidunt error officia magni blanditiis earum deserunt cupiditate</li>
+                <ul class="li-content">
+                    <li>The UniFit <b>workout</b> program offers personalized advice based on your height and weight, ensuring you adhere to a plan designed to meet your unique requirements and objectives.</li>
+                    <li>The <b>diet</b> program at UniFit offers professional advice as well as individualized meal plans to enhance your fitness journey while assisting you in choosing healthier foods and obtaining a balanced diet.</li>
+                    <li>You may quickly identify and connect with certified fitness trainers that match your interests via UniFit's <b>trainer connect</b> program, giving you access to their expert advice and support while you pursue your goals.</li>
                 </ul>
-                <button class="learn">Learn More</button>
             </div>
         </div>
     </div>
@@ -71,7 +68,6 @@
         <div class="c-text">
             <div class="t-head">
                 <h1 class="c-title"><span style="color:#81D98F">Categories</span> We Provide</h1>
-                <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
             </div>
         </div>
         <div class="ca-picts">
@@ -103,7 +99,7 @@
         <div class="info-cards">
             <div class="info-card">
                 <img src="{{asset('images/home-06.jpg')}}" alt="">
-                <h2 class="subtitle">Recommended Unified Fitness Plan</h2>
+                <h2 class="subtitle"><b>Recommended Unified Fitness Plan</b></h2>
                 <p class="info-subtext">
                     With our BMI calculation you will be given a personalized 
                     fitness plan according to your goal that suits you. If you don’t have time to go to the gym,
@@ -112,7 +108,7 @@
             </div>
             <div class="info-card">
                 <img src="{{asset('images/home-07.png')}}" alt="">
-                <h2 class="subtitle">Connect with Trainer</h2>
+                <h2 class="subtitle"><b>Connect with Trainer</b></h2>
                 <p class="info-subtext">
                     You will be given personalized experts guidance. Our experts will consult you,
                      find out your problems and weeknesses and provide you a solution for it. They will
@@ -123,7 +119,7 @@
         <div class="info-cards">
             <div class="info-card">
                 <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Personalized Nutrition Plan</h2>
+                <h2 class="subtitle"><b>Personalized Nutrition Plan</b></h2>
                 <p class="info-subtext">
                     No temporary diets can reduce your body fat. You will be given a personalized nutrition
                      plan that suits your needs and choices. We will guide you, what exactly you are supposed
@@ -133,7 +129,7 @@
             </div>
             <div class="info-card">
                 <img src="{{asset('images/home-09.jpg')}}" alt="">
-                <h2 class="subtitle">Results</h2>
+                <h2 class="subtitle"><b>Results</b></h2>
                 <p class="info-subtext">
                     At last the only thing that matters is what you do, CONSISTENTLY!! Only action can create
                      change. The only thing that we want from your side is…. Consistency. That's it. Rest,
@@ -146,7 +142,6 @@
     <div class="section-5">
         <div class="c-text">
             <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
-            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
         </div>
         <div class="bmi">
             <table style="width:80vw;" id="input">
@@ -182,32 +177,23 @@
     <div class="section-6">
         <div class="c-text">
             <h1 class="c-title">Our <span style="color:#81D98F">Success Stories</span></h1>
-            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+            <h3 class="subtitle">Read our friend success stories from using UniFit to support their fitness journey.</h3>
         </div>
-        <div class="story">
-            <div class="story-text">
-                <h3 class="s-title">Felix Fithub</h3>
-                <p class="s-content">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem omnis, odit tempora aspernatur maiores, nostrum voluptates facere magnam suscipit necessitatibus, dignissimos at rerum enim ab dolores amet id quisquam culpa?
+        <div class="s-card-6">
+            <div class="texts-6">
+                <h5 class="texts-6-title">Felix Fithub</h5>
+                <p class="texts-6-content">
+                    "I credit UniFit with helping me lose a remarkable amount of weight. I was able to stick to a customised routine with their personalized fitness program that was ideal for my height and weight. The diet program included professional advice and meal planning that assisted me in choosing healthier foods and obtaining a balanced diet. The training checklist routines and progress tracker helped me keep focused and on track. But the trainer connect program, where I met a fantastic fitness trainer who gave me great advice and support throughout my journey, was the real game-changer. I lost the extra weight and acquired renewed confidence as well as a better lifestyle thanks to UniFit. My life has been revolutionized by UniFit."
                 </p>
             </div>
-            <div class="story-image">
-                <div class="s-images">
-                    <div class="s-image">
-                        <img src="{{asset('images/home-08.png')}}" alt="">
-                        <h3 class="s-image-title">Before</h3>
-                    </div>
-                    <div class="s-image">
-                        <img src="{{asset('images/home-08.png')}}" alt="">
-                        <h3 class="s-image-title">After</h3>
-                    </div>
+            <div class="images-6">
+                <div class="image">
+                    <img src="{{asset('images/about-06.png')}}" alt="">
+                    <p class="image-text">Before</p>
                 </div>
-                <div class="s-pages">
-                    <div class="s-left"><i class="bi bi-arrow-left" style="color: black"></i></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="s-right"><i class="bi bi-arrow-right" style="color: black"></i></div>
+                <div class="image">
+                    <img src="{{asset('images/about-07.png')}}" alt="">
+                    <p class="image-text">After</p>
                 </div>
             </div>
         </div>
@@ -215,21 +201,18 @@
     <div class="section-7">
         <div class="c-text">
             <h1 class="c-title"><span style="color:#81D98F">Our</span> Trainer</h1>
-            <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam<br> sagittis aliquam, tortor sollicitudin egestas convallis.</h3>
+            <h3 class="subtitle">Your fitness journey will be transformed by UniFit's Trainer Connect program.</h3>
         </div>
-        <div class="t-section">
-            <div class="t-image">
-                <img src="{{asset('images/home-08.png')}}" alt="">
+        <div class="s-card-7">
+            <div class="t-img">
+                <img src="{{asset('images/about-02.png')}}" alt="">
             </div>
-            <div class="t-texts">
-                <p class="t-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sagittis aliquam, tortor sollicitudin egestas convallis.
+            <div class="t-text">
+                <p class="subtext">
+                    This service matches you with a skilled collection of fitness trainers that match your preferences and goals, whether you're just starting out or an experienced fitness fanatic. You have access to a variety of profiles with UniFit's Trainer Connect, including certifications, specialties, enabling you to make a smart choice. Find the ideal trainer who will provide you individualized coaching, design custom training routines, and provide continuing support to keep you motivated and get the results you want. Your key to realizing your maximum fitness potential and discovering the transformative power of expert instruction is UniFit's Trainer Connect program.
                 </p>
-                <button class="t-button">Trainer Connect</button>
-            </div>  
+                <a class="b-card" href="/trainer/" role="button">Trainer Connect</a>
+            </div>
         </div>
     </div>
     <div class="section-8">

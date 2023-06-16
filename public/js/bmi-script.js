@@ -18,21 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
             bmiResult.classList.add('color-green');
             let link = `<a href="/category/3" class="nav-link">CLICK HERE!<br>To see our gain muscle programs.</a>`;
             bmiResult.innerHTML = 'You are skinny.<br>' + link;
-            if (isLoggedIn) {
+            if (isLoggedIn != 0) {
                 updateProgram('3', isLoggedIn);
             }
         } else if (bmi < 25) {
             bmiResult.classList.add('color-green');
             let link = `<a href="/category/2" class="nav-link">CLICK HERE!<br>To see our maintain weight (increase overall fitness health) programs.</a>`;
             bmiResult.innerHTML = 'You are healthy.<br>' + link;
-            if (isLoggedIn) {
+            if (isLoggedIn != 0) {
                 updateProgram('2', isLoggedIn);
             }
         } else {
             bmiResult.classList.add('color-green');
             let link = `<a href="/category/1" class="nav-link">CLICK HERE!<br>To see our lose weight programs.</a>`;
             bmiResult.innerHTML = 'You are overweight.<br>' + link;
-            if (isLoggedIn) {
+            if (isLoggedIn != 0) {
                 updateProgram('1', isLoggedIn);
             }
         }

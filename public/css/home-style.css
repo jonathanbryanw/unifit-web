@@ -102,28 +102,35 @@
 .subtitle{
     margin-top: 10px;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.content{
+.t-content{
     font-size: medium;
 }
 
-.learn{
-    padding: 5px 10px;
-    color: white;
-    background-color: #454545;
-}
 .pict{
     width: calc((100vw - (var(--scrollbar-width)))/2);
     height: 30rem;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .pict img{
     width: 100%;
-    max-height: 30rem;
+    height: 100%;
 }
 
+.c-text{
+    margin-bottom: 20px;
+}
+
+.li-content{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+}
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-3{
@@ -143,7 +150,7 @@
 
 .ca-card{
     width: 30%;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
 
@@ -152,6 +159,8 @@
     display: inline-block;
     text-align: center;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .ca-pict img{
@@ -231,7 +240,10 @@
 }
 
 .bmi{
-    background-color: #81D98F;
+    background-image: url('../images/home-back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #input td{
@@ -260,44 +272,43 @@
     margin: 2vh 6vw;  
 }
 
-.story{
-    background-color: #81D98F;
+.s-card-6{
+    background-color: rgba(129, 217, 143, 0.7);
     display: flex;
 }
 
-.story-text{
+.texts-6{
     background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 2vw 3vh;
+    width: 30vw;
+}
+
+.texts-6-title{
+    margin-top: 30px;
+}
+
+.texts-6-content{
     margin: 20px;
-    padding: 20px;
-    text-align: center;
-    width: 50vw;
-}
-.story-image{
-    width: 50vw;
 }
 
-.s-images{
+.images-6{
+    margin: 50px;
     display: flex;
-    margin: 20px 20px 0 20px;
-}
-
-.s-image{
-    margin-right: 5vw;
+    justify-content: space-evenly;
+    width: 50vw;
     text-align: center;
 }
-.s-image:last-child {
-    margin-right: 0;
+
+.image img{
+    width: 300px;
+    height: 400px;
 }
 
-.s-image img{
-    width: 250px;
-    height: 200px;
+.image-text{
+    margin-top: 30px;
 }
 
-.s-pages{
-    display: flex;
-    margin: 10px 250px;
-}
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -305,37 +316,29 @@
     margin: 2vh 6vw;  
 }
 
-.t-section{
+.s-card-7{
     display: flex;
+    margin-top: 5vh;
 }
 
-.t-image{
-    width: 50vw;
-}
-
-.t-image img{
-    margin: 10px;
+.t-img{
     width: 40vw;
-    height: 40vh;
+    overflow: hidden;
+    padding: 0 5vw 3vh 5vw;
 }
 
-.t-texts{
-    width: 50vw;
+.t-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .t-text{
-    width: 80%;
-    margin: auto;
+    width: 40vw;
     text-align: center;
-    word-wrap: break-word;
-}
-
-.t-button{
-    padding: 5px 10px;
-    color: white;
-    background-color: #454545;
-    width: max-content;
-    margin: 20px 40%;
+    margin-top: 2vh;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -353,11 +356,12 @@
 }
 
 .b-card{
-    padding: 5px 10px;
+    padding: 10px 15px;
     color: white;
     background-color: #454545;
     width: fit-content;
     align-self: center;
+    text-decoration: none;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */

@@ -1,4 +1,4 @@
-.top{
+.top, .middle{
     margin: 0 6vw;
 }
 
@@ -24,12 +24,141 @@
     width: 50vw;
 }
 
-.c-title{
+.c-title, .s-title{
     font-style: italic;
 }
 
 .img-top img{
     width: 50vw;
     height: 60vh;
+    margin: 50px 50px 0 50px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.subtitle{
+    margin-top: 10px;
+}
+
+.s-card-1{
+    display: flex;
+    margin-top: 5vh;
+}
+
+.t-img{
+    width: 40vw;
+    overflow: hidden;
+    padding: 0 5vw 3vh 5vw;
+}
+
+.t-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.t-text{
+    width: 40vw;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.b-card{
+    padding: 10px 15px;
+    color: white;
+    background-color: #454545;
+    width: fit-content;
+    align-self: center;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.s-card-2{
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.card{
+    width: 15vw;
+    text-align: center;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-3{
+    margin-top: 3vh;
+}
+
+.s-card-3{
+    background-color: rgba(129, 217, 143, 0.7);
+    display: flex;
+}
+
+.texts-3{
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 2vw 3vh;
+    width: 30vw;
+}
+
+.texts-3-title{
+    margin-top: 30px;
+}
+
+.texts-3-content{
+    margin: 20px;
+}
+
+.images-3{
     margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    text-align: center;
+}
+
+.image img{
+    width: 300px;
+    height: 400px;
+}
+
+.image-text{
+    margin-top: 30px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-4{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.s-card-4{
+    text-align: center;
+}
+
+.cards-4{
+    margin-bottom: 10px;
+}
+
+.cards-4-text{
+    margin: auto;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: rgba(129, 217, 143, 0.7);
+    width: max-content;
 }
