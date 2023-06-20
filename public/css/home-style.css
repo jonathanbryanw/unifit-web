@@ -68,7 +68,7 @@
 
 .header{
     position: absolute;
-    top: 22%;
+    top: 17%;
     left: 35vw;
 }
 
@@ -79,6 +79,7 @@
     font-size: 36px;
     margin-top: 1%;
     font-style: italic;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
@@ -102,7 +103,6 @@
 .subtitle{
     margin-top: 10px;
     font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .t-content{
@@ -119,6 +119,8 @@
 .pict img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .c-text{
@@ -134,7 +136,7 @@
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-3{
-    margin: 2vh 6vw;
+    margin: 2vh 5vw;
 }
 
 .c-title{
@@ -214,7 +216,7 @@
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-4{
-    margin: 2vh 6vw;  
+    margin: 2vh 5vw;  
 }
 
 .info-cards{
@@ -231,45 +233,106 @@
 .info-card img{
     width: 40vw;
     height: 30vh;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
-.section-5{
-    margin: 2vh 6vw;  
+.c-text-5{
+    margin: 2vh 5vw;  
 }
 
 .bmi{
     background-image: url('../images/home-back.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.bmiWindow{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+}
+
+#input{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#input label{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    display: block;
 }
 
 #input td{
     padding: 2%;
     text-align: center;
     width: 50%;
-    border: 1px solid black;
 }
 
-#input label{
-    display: block;
+.bmiText{
+    color: #000000;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 84px;
 }
 
 #input input{
-    display: block;
-    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 30px;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
 }
 
-#input p{
-    background-color: rgba(255, 255, 255, 0.7);
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.weight-con, .height-con {
+    position: relative;
+}
+
+.weight-con::after {
+    content: "kg";
+    position: absolute;
+    top: 75%;
+    transform: translateY(-120%);
+    right: 40px;
+}
+.height-con::after {
+    content: "cm";
+    position: absolute;
+    top: 75%;
+    transform: translateY(-120%);
+    right: 40px;
+}
+
+#result{
+    width: 100%;
+    height: 20vh;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    font-size: x-large;
+    padding: 2%;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-6{
-    margin: 2vh 6vw;  
+    margin: 2vh 5vw;  
 }
 
 .s-card-6{
@@ -313,7 +376,7 @@
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-7{
-    margin: 2vh 6vw;  
+    margin: 2vh 5vw;  
 }
 
 .s-card-7{
@@ -343,7 +406,7 @@
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-8{
-    margin: 2vh 6vw;  
+    margin: 2vh 5vw;  
 }
 
 .cards{
@@ -351,12 +414,25 @@
 }
 
 .card{
-    padding: 10px 2%;
+    padding: 10px 7px;
     border: none;
+    width: 33vw;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-subtext{
+    width: 100%;
+    height: 17.5vh;
 }
 
 .b-card{
-    padding: 10px 15px;
+    padding: 5px 10px;
     color: white;
     background-color: #454545;
     width: fit-content;
@@ -367,5 +443,5 @@
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-9{
-    margin: 2vh 6vw;  
+    margin: 2vh 5vw;  
 }

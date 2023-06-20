@@ -52,7 +52,8 @@ class ProgramController extends Controller
     {
         $program = Program::find($id);
         $trainers = Trainer::join('users', 'trainers.user_id', '=', 'users.id')
-                            ->where('program_id', $id)
+                            ->where('users.program_id', $id)
+                            ->select('trainers.id', 'users.name', 'trainers.image')
                             ->get();
         $workouts = Workout::where('program_id', $id)
                             ->get();

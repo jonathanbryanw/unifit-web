@@ -6,6 +6,7 @@
 
 @section('js')
 <script src="{{asset('js/slider-script.js')}}"></script>
+<script src="{{asset('js/home-script.js')}}"></script>
 <script>
     document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
 </script>
@@ -16,8 +17,8 @@
     <div class="slider-out">
         <div class="slider-in">
             <img src="{{asset('images/slider-1.png')}}" alt="" class="active" id="1">
-            <img src="{{asset('images/pancing.png')}}" alt="" id="2">
-            <img src="{{asset('images/ajak.jpg')}}" alt="" id="3">
+            <img src="{{asset('images/home-back.png')}}" alt="" id="2">
+            <img src="{{asset('images/slider-02.png')}}" alt="" id="3">
         </div>
         <div class="slider-dot">
             <div class="dot active-dot" onclick="dotSwitch(1)"></div>
@@ -140,38 +141,40 @@
         </div>
     </div>
     <div class="section-5">
-        <div class="c-text">
+        <div class="c-text-5">
             <h1 class="c-title">Find Your <span style="color:#81D98F">Unified Fitness Program!</span></h1>
         </div>
         <div class="bmi">
-            <table style="width:80vw;" id="input">
-                <tr>
-                    <th colspan="2">&nbsp;</th>
-                </tr>
-                <form action="" id="bmiForm">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label for="weight">Insert your weight</label>
-                                <input type="number" name="weight" id="weight" required>
-                            </td>
-                            <td rowspan="4"><h2>Choose your personalized fitness program!</h2></td>                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="height">Insert your height</label>
-                                <input type="number" name="height" id="height" required>
-                            </td>                      
-                        </tr>
-                        <tr>                            
-                            <td><button type="submit" class="btn btn-secondary">Submit</button></td>
-                        </tr>
-                        <tr>
-                            <td><p id="result"></p></td>
-                        </tr>
-                    </tbody>
-                </form>
-            </table> 
+            <div class="bmiWindow">
+                <table id="input">
+                    <tr>
+                        <th colspan="2">&nbsp;</th>
+                    </tr>
+                    <form action="" id="bmiForm">
+                        <tbody>
+                            <tr>
+                                <td class="weight-con">
+                                    <label for="weight">Insert your weight</label>
+                                    <input type="number" name="weight" id="weight" step="any" required>
+                                </td>
+                                <td rowspan="4"><h2 class="bmiText">Choose your personalized fitness program!</h2></td>                            
+                            </tr>
+                            <tr>
+                                <td class="height-con">
+                                    <label for="height">Insert your height</label>
+                                    <input type="number" name="height" id="height" required>
+                                </td>                      
+                            </tr>
+                            <tr>                            
+                                <td class="btnSubmit"><button type="submit" id="calcButton" class="btn btn-secondary">Calculate</button></td>
+                            </tr>
+                            <tr>
+                                <td class="pResult"><p id="result"></p></td>
+                            </tr>
+                        </tbody>
+                    </form>
+                </table>                 
+            </div>
         </div>
     </div>
     <div class="section-6">
@@ -217,76 +220,43 @@
     </div>
     <div class="section-8">
         <div class="c-text">
-            <h1 class="c-title">Checkout Our <span style="color:#81D98F">Healthy Recipes</span></h1>
+            <h2 class="c-title">Lose<span style="color:#81D98F"> Weight</span> Diet</h2>
         </div>
         <div class="cards">
-            <div class="card">
-                <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Lose Weight</h2>
-                <p class="card-subtext">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
-                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
-                     eligendi deserunt ea facere saepe alias, rem id?
-                </p>
-                <button class="b-card">Read Recipe</button>
-            </div>
-            <div class="card">
-                <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Gain Muscle</h2>
-                <p class="card-subtext">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
-                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
-                     eligendi deserunt ea facere saepe alias, rem id?
-                </p>
-                <button class="b-card">Read Recipe</button>
-            </div>
-            <div class="card">
-                <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Increase Health</h2>
-                <p class="card-subtext">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
-                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
-                     eligendi deserunt ea facere saepe alias, rem id?
-                </p>
-                <button class="b-card">Read Recipe</button>
-            </div>
+            @foreach($diets as $diet)
+                @php
+                    $description = $diet->description;
+                    $text = strtok($description, '.');
+                @endphp
+                <div class="card">
+                    <img src="{{asset('images/'.$diet->image)}}" alt="">
+                    <h2 class="subtitle">{{ $diet->category }}</h2>
+                    <p class="card-subtext">
+                        {{ $text }}.
+                    </p>
+                    <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
+                </div>
+            @endforeach
         </div>
     </div>
     <div class="section-9">
         <div class="c-text">
-            <h1 class="c-title">Read <span style="color:#81D98F">Workout</span></h1>
-        </div>
+            <h2 class="c-title">Lose<span style="color:#81D98F"> Weight</span> Workout</h2>        </div>
         <div class="cards">
-            <div class="card">
-                <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Lose Weight</h2>
-                <p class="card-subtext">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
-                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
-                     eligendi deserunt ea facere saepe alias, rem id?
-                </p>
-                <button class="b-card">Read Article</button>
-            </div>
-            <div class="card">
-                <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Gain Muscle</h2>
-                <p class="card-subtext">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
-                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
-                     eligendi deserunt ea facere saepe alias, rem id?
-                </p>
-                <button class="b-card">Read Article</button>
-            </div>
-            <div class="card">
-                <img src="{{asset('images/home-08.png')}}" alt="">
-                <h2 class="subtitle">Increase Health</h2>
-                <p class="card-subtext">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis atque cumque
-                     delectus doloribus eius veritatis culpa non iste ducimus consequatur? Ut officiis
-                     eligendi deserunt ea facere saepe alias, rem id?
-                </p>
-                <button class="b-card">Read Article</button>
-            </div>
+            @foreach($workouts as $workout)
+                @php
+                    $description = $workout->description;
+                    $text = strtok($description, '.');
+                @endphp
+                <div class="card">
+                    <img src="{{asset('images/'.$workout->image)}}" alt="">
+                    <h2 class="subtitle">{{ $workout->name }}</h2>
+                    <p class="card-subtext">
+                        {{ $text }}.
+                    </p>
+                    <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
+                </div>
+            @endforeach
         </div>
     </div>
 </div>   

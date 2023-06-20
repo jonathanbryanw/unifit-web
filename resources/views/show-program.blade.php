@@ -12,10 +12,10 @@
 @section('content')
 <div class="section">
     <div class="text">
-        <h2 class="title">
-        CATEGORY<br>
-        <b>{{ $program->name }}</b>
-        </h2>       
+        <h1 class="title">
+        Category<br>
+        {{ $program->name }}
+        </h1>       
     </div>
     <div class="text">
         <h2 class="c-title"><span style="color:#81D98F">{{ $program->name }}</span> Trainer</h2>
@@ -27,7 +27,7 @@
                     <div class="image">
                         <img src="{{asset('images/'.$trainer->image)}}" alt="">
                     </div>
-                    <p class="t-subtext">{{ $trainer->user->name }}</p>
+                    <p class="t-subtext">{{ $trainer->name }}</p>
                 </div>
             </a>
         @endforeach
@@ -45,7 +45,7 @@
                 <div class="card">
                     <img src="{{asset('images/'.$workout->image)}}" alt="">
                     <h2 class="subtitle">{{ $workout->name }}</h2>
-                    <p class="subtext">
+                    <p class="card-subtext">
                         {{ $text }}.
                     </p>
                     <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
@@ -65,7 +65,7 @@
                 @endphp
                 <div class="card">
                     <img src="{{asset('images/'.$diet->image)}}" alt="">
-                    <h2 class="subtitle">{{ $diet->name }}</h2>
+                    <h2 class="subtitle">{{ $diet->category }}</h2>
                     <p class="card-subtext">
                         {{ $text }}.
                     </p>

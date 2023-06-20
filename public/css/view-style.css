@@ -42,6 +42,10 @@ header{
   color: #81D98F;
   text-decoration: none;
 }
+
+.nav a:focus{  
+    color: #81D98F;
+}
   
 
 .logo{

@@ -9,7 +9,11 @@
 @endsection
 
 @section('content')
-
+@if(Session::has('message'))
+    <div class="alert alert-warning" role="alert">
+        {{ Session::get('message') }}
+    </div>
+@endif
 {{-- <x-guest-layout> --}}
 <div class="top">
     <div class="text">

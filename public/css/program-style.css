@@ -2,8 +2,8 @@
 
 
 .c-text{
-    padding: 25px 6vw;
-    margin-top: 5vh;
+    margin-top: 50px;
+    padding-bottom: 25px;
     text-align: center;
 }
 
@@ -25,6 +25,12 @@
     margin-bottom: 4vh;
     max-width: 30vw;
     text-align: center;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }
 
 input{

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\WeightDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class WeightDetailController extends Controller
 {
@@ -24,12 +25,8 @@ class WeightDetailController extends Controller
             ]);
             
         }else{
-            $user = 0;
-            $weightdetails = [];
-            return view('program', [
-               'user' => $user,
-               'weightdetails' => $weightdetails
-            ]);
+            Session::flash('message', 'You need to log in to access the Find Program page');
+            return redirect(url('/register'));
         }
     }
 

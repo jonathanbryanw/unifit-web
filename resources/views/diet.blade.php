@@ -13,7 +13,7 @@
     <div class="text">
         <div class="t-head">
             <h1 class="title">Checkout our<span style="color:#81D98F"> Diet Choices</span></h1>
-            <h2 class="subtitle">Choose the perfect diet recommendation that suits your lifestyle and preference.</h2>
+            <h3 class="subtitle">Choose the perfect diet recommendation that suits your lifestyle and preference.</h3>
         </div>
     </div>
     <div class="c-section">
@@ -29,15 +29,11 @@
                     @endphp
                     <div class="card">
                         <img src="{{asset('images/'.$diet->image)}}" alt="">
-                        <h2 class="subtitle">{{ $diet->name }}</h2>
+                        <h2 class="subtitle">{{ $diet->category }}</h2>
                         <p class="card-subtext">
                             {{ $text }}.
                         </p>
                         <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
-                    </div>
-                @else
-                    <div class="card">
-                        <h2>Diet Category is empty</h2>
                     </div>
                 @endif
             @endforeach
@@ -56,15 +52,11 @@
                     @endphp
                     <div class="card">
                         <img src="{{asset('images/'.$diet->image)}}" alt="">
-                        <h2 class="subtitle">{{ $diet->name }}</h2>
+                        <h2 class="subtitle">{{ $diet->category }}</h2>
                         <p class="card-subtext">
                             {{ $text }}.
                         </p>
                         <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
-                    </div>
-                @else
-                    <div class="card">
-                        <h2>Diet Category is empty</h2>
                     </div>
                 @endif
             @endforeach
@@ -83,15 +75,11 @@
                     @endphp
                     <div class="card">
                         <img src="{{asset('images/'.$diet->image)}}" alt="">
-                        <h2 class="subtitle">{{ $diet->name }}</h2>
+                        <h2 class="subtitle">{{ $diet->category }}</h2>
                         <p class="card-subtext">
                             {{ $text }}.
                         </p>
                         <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
-                    </div>
-                @else
-                    <div class="card">
-                        <h2>Diet Category is empty</h2>
                     </div>
                 @endif
             @endforeach

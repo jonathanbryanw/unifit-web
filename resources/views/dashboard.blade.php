@@ -1,16 +1,25 @@
 @extends('layouts.view')
 
 @section('css')
-
+<link rel="stylesheet" href="{{asset('css/dashboard-style.css')}}">
 @endsection
 
 @section('js')
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+
 @endsection
 
 @section('content')
+<div class="top">
+    <div class="text">
+        <div class="t-head">
+            <h1 class="title">Edit <span style="color:#81D98F">Profile</span></h1>
+        </div>
+    </div>
+</div>
 
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+
+
+{{-- <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -68,7 +77,7 @@
             </div>
         </div>
     </div>
-</nav>
+</nav> --}}
 
 
 

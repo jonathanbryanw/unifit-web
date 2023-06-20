@@ -100,11 +100,11 @@
         <div class="form">
             <form action="" id="bmiForm">
                 <div class="weight-con">
-                    <label for="weight">Insert your weight</label>
+                    <label for="weight">Insert your weight  <img src="{{asset('images/kg.png')}}" alt="" class="icon"></label>
                     <input type="number" name="weight" id="weight" step="any" required>  
                 </div>
                 <div class="height-con">
-                    <label for="height">Insert your height</label>
+                    <label for="height">Insert your height  <img src="{{asset('images/cm.png')}}" alt="" class="icon"></label>
                     <input type="number" name="height" id="height" required>                
                 </div>
                 <div>

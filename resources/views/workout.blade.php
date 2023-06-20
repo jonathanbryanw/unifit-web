@@ -21,7 +21,7 @@
     <div class="text">
         <div class="t-head">
             <h1 class="title">Checkout our<span style="color:#81D98F"> Workout Choices</span></h1>
-            <h2 class="subtitle">Choose the best workout program that fits your schedule and preference.</h2>
+            <h3 class="subtitle">Choose the best workout program that fits your schedule and preference.</h3>
         </div>
     </div>
     <div class="c-section">
@@ -38,14 +38,10 @@
                     <div class="card">
                         <img src="{{asset('images/'.$workout->image)}}" alt="">
                         <h2 class="subtitle">{{ $workout->name }}</h2>
-                        <p class="subtext">
+                        <p class="card-subtext">
                             {{ $text }}.
                         </p>
                         <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
-                    </div>
-                @else
-                    <div class="card">
-                        <h2>Workout Category is empty</h2>
                     </div>
                 @endif
             @endforeach
@@ -65,14 +61,10 @@
                     <div class="card">
                         <img src="{{asset('images/'.$workout->image)}}" alt="">
                         <h2 class="subtitle">{{ $workout->name }}</h2>
-                        <p class="subtext">
+                        <p class="card-subtext">
                             {{ $text }}.
                         </p>
                         <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
-                    </div>
-                @else
-                    <div class="card">
-                        <h2>Workout Category is empty</h2>
                     </div>
                 @endif
             @endforeach
@@ -92,14 +84,10 @@
                     <div class="card">
                         <img src="{{asset('images/'.$workout->image)}}" alt="">
                         <h2 class="subtitle">{{ $workout->name }}</h2>
-                        <p class="subtext">
+                        <p class="card-subtext">
                             {{ $text }}.
                         </p>
                         <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
-                    </div>
-                @else
-                    <div class="card">
-                        <h2>Workout Category is empty</h2>
                     </div>
                 @endif
             @endforeach

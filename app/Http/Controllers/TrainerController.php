@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Trainer;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TrainerController extends Controller
@@ -15,9 +16,26 @@ class TrainerController extends Controller
     public function index()
     {
         $trainers = Trainer::all();
-        return view('connect', [
-            'trainers' => $trainers
-        ]);
+        if(auth()->check()){
+            $user = auth()->user()->role_id;
+            $users = [];
+            if($user == 1){
+                $users = User::all();
+            }
+            return view('connect', [
+                'trainers' => $trainers,
+                'role' => $user,
+                'users' => $users
+            ]);
+        }
+        else{
+            $user = 0;
+            $users = [];
+            return view('connect', [
+                'trainers' => $trainers,
+                'role' => $user
+            ]);
+        }
     }
 
     /**
@@ -61,7 +79,9 @@ class TrainerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trainer = Trainer::findOrFail($id);
+        
+        return view('edit-trainer', compact('trainer'));
     }
 
     /**

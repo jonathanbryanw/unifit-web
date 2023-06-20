@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DietController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\TrainerController;
@@ -24,10 +25,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/', function () {
-    return view('home');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -38,13 +35,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require_once __DIR__.'/auth.php';
 
 Route::get('/about', function () {
     return view('about');
 });
 
-
+Route::resource('/', HomeController::class);
 Route::resource('/program', WeightDetailController::class)->only(['index','store','update']);
 Route::resource('/category', ProgramController::class)->only(['show','update']);
 Route::resource('/diet', DietController::class);
