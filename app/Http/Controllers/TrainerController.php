@@ -33,7 +33,8 @@ class TrainerController extends Controller
             $users = [];
             return view('connect', [
                 'trainers' => $trainers,
-                'role' => $user
+                'role' => $user,
+                'users' => $users
             ]);
         }
     }

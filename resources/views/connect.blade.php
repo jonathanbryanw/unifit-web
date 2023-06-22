@@ -87,48 +87,50 @@
         @endforeach
     </div>
 </div>
-<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="userModalLabel">User Attributes</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Program</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @php
-                            $count=1;
-                        @endphp
-                        @foreach($users as $user)
-                            @if($user->role_id == 2)
-                                <tr>
-                                    <td>{{ $count}}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->program->name }}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">Add as Trainer</button>
-                                    </td>
-                                </tr>
-                                @php
-                                    $count++;
-                                @endphp
-                            @endif
-                        @endforeach
-                    </tbody>
-                </table>
+@if ($role == 1)
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Add Trainer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Program</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                                $count=1;
+                            @endphp
+                            @foreach($users as $user)
+                                @if($user->role_id == 2)
+                                    <tr>
+                                        <td>{{ $count}}</td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->program->name }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-success">Add as Trainer</button>
+                                        </td>
+                                    </tr>
+                                    @php
+                                        $count++;
+                                    @endphp
+                                @endif
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
+@endif
 @endsection
 
 {{-- <div class="content-1">
