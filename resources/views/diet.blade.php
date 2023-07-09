@@ -33,7 +33,7 @@
                         <p class="card-subtext">
                             {{ $text }}.
                         </p>
-                        <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
+                        <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Article</a>
                     </div>
                 @endif
             @endforeach
@@ -56,7 +56,7 @@
                         <p class="card-subtext">
                             {{ $text }}.
                         </p>
-                        <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
+                        <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Article</a>
                     </div>
                 @endif
             @endforeach
@@ -79,7 +79,7 @@
                         <p class="card-subtext">
                             {{ $text }}.
                         </p>
-                        <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
+                        <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Article</a>
                     </div>
                 @endif
             @endforeach
