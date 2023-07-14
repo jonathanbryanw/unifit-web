@@ -36,13 +36,16 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <img src="{{asset('images/'.$workout->image)}}" alt="">
-                        <h2 class="subtitle">{{ $workout->name }}</h2>
-                        <p class="card-subtext">
-                            {{ $text }}.
-                        </p>
+                        <a href="/workout/{{ $workout->id }}" class="card-link">
+                            <img src="{{asset('images/'.$workout->image)}}" alt="">
+                            <h2 class="subtitle">{{ $workout->name }}</h2>
+                            <p class="card-subtext">
+                                {{ $text }}.
+                            </p>
+                        </a>
                         <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                     </div>
+
                 @endif
             @endforeach
         </div>
@@ -59,11 +62,13 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <img src="{{asset('images/'.$workout->image)}}" alt="">
-                        <h2 class="subtitle">{{ $workout->name }}</h2>
-                        <p class="card-subtext">
-                            {{ $text }}.
-                        </p>
+                        <a href="/workout/{{ $workout->id }}" class="card-link">
+                            <img src="{{asset('images/'.$workout->image)}}" alt="">
+                            <h2 class="subtitle">{{ $workout->name }}</h2>
+                            <p class="card-subtext">
+                                {{ $text }}.
+                            </p>
+                        </a>
                         <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                     </div>
                 @endif
@@ -82,11 +87,13 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <img src="{{asset('images/'.$workout->image)}}" alt="">
-                        <h2 class="subtitle">{{ $workout->name }}</h2>
-                        <p class="card-subtext">
-                            {{ $text }}.
-                        </p>
+                        <a href="/workout/{{ $workout->id }}" class="card-link">
+                            <img src="{{asset('images/'.$workout->image)}}" alt="">
+                            <h2 class="subtitle">{{ $workout->name }}</h2>
+                            <p class="card-subtext">
+                                {{ $text }}.
+                            </p>
+                        </a>
                         <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                     </div>
                 @endif

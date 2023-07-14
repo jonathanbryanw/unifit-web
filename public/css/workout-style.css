@@ -11,6 +11,11 @@
     text-align: center;
 }
 
+.card-link{
+    text-decoration: none;
+    color: inherit;
+}
+
 .cards{
     display: flex;
 }

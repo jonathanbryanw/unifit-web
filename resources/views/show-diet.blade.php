@@ -16,10 +16,9 @@
         </div>
         <div class="text">
             <h1 class="subtitle">{{ $diet->name }}</h1>
-            <h1 class="subtitle">{{ $diet->category }}</h1>
             <h3>{{$diet->program->name}}</h3>
             <p class="subtext">
-                {{ $diet->description }}
+                {!! $diet->description !!}
             </p>
         </div>
     </div>

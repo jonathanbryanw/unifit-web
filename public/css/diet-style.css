@@ -15,6 +15,11 @@
     display: flex;
 }
 
+.card-link{
+    text-decoration: none;
+    color: inherit;
+}
+
 .card{
     padding: 10px 8px;
     border: none;

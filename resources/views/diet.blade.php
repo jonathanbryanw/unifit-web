@@ -28,11 +28,13 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <img src="{{asset('images/'.$diet->image)}}" alt="">
-                        <h2 class="subtitle">{{ $diet->category }}</h2>
-                        <p class="card-subtext">
-                            {{ $text }}.
-                        </p>
+                        <a href="/diet/{{ $diet->id }}" class="card-link">
+                            <img src="{{asset('images/'.$diet->image)}}" alt="">
+                            <h2 class="subtitle">{{ $diet->category }}</h2>
+                            <p class="card-subtext">
+                                {{ $text }}.
+                            </p>
+                        </a>
                         <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Article</a>
                     </div>
                 @endif
@@ -51,11 +53,13 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <img src="{{asset('images/'.$diet->image)}}" alt="">
-                        <h2 class="subtitle">{{ $diet->category }}</h2>
-                        <p class="card-subtext">
-                            {{ $text }}.
-                        </p>
+                        <a href="/diet/{{ $diet->id }}" class="card-link">
+                            <img src="{{asset('images/'.$diet->image)}}" alt="">
+                            <h2 class="subtitle">{{ $diet->category }}</h2>
+                            <p class="card-subtext">
+                                {{ $text }}.
+                            </p>
+                        </a>
                         <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Article</a>
                     </div>
                 @endif
@@ -74,11 +78,13 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <img src="{{asset('images/'.$diet->image)}}" alt="">
-                        <h2 class="subtitle">{{ $diet->category }}</h2>
-                        <p class="card-subtext">
-                            {{ $text }}.
-                        </p>
+                        <a href="/diet/{{ $diet->id }}" class="card-link">
+                            <img src="{{asset('images/'.$diet->image)}}" alt="">
+                            <h2 class="subtitle">{{ $diet->category }}</h2>
+                            <p class="card-subtext">
+                                {{ $text }}.
+                            </p>
+                        </a>
                         <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Article</a>
                     </div>
                 @endif
