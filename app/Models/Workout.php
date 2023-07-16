@@ -11,7 +11,7 @@ class Workout extends Model
 
     protected $table = 'workouts';
 
-    protected $fillable = ['name', 'program_id', 'description', 'photo'];
+    protected $fillable = ['name', 'program_id', 'description', 'image'];
 
     public function program(){
         return $this->belongsTo(Program::class);

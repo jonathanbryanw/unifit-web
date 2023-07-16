@@ -10,9 +10,22 @@
     text-align: center;
     z-index: -1;
 }
+
+.window{
+    margin: 260px 6vw 100px 5vw;  
+}
+
 .section{
     display: flex;
-    margin: 260px 6vw 100px 5vw;  
+}
+
+.b-card{
+    padding: 5px 10px;
+    color: white;
+    background-color: #454545;
+    width: fit-content;
+    text-decoration: none;
+    margin-left: 70vw;
 }
 
 img{

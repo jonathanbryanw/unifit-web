@@ -32,13 +32,17 @@
                             <img src="{{asset('images/'.$trainer->image)}}" alt="">
                         </div>
                         <p class="subtext">{{ $trainer->user->name }}</p>
+                </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-danger delete-button" href="#" role="button">Delete</a>
+                                <form action="/trainer/{{ $trainer->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger delete-button">Delete</button>
+                                </form>
                             </div>                        
                         @endif
                     </div>
-                </a>
             @endif
         @endforeach
     </div>
@@ -54,13 +58,17 @@
                             <img src="{{asset('images/'.$trainer->image)}}" alt="">
                         </div>
                         <p class="subtext">{{ $trainer->user->name }}</p>
+                </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-danger delete-button" href="#" role="button">Delete</a>
+                                <form action="/trainer/{{ $trainer->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger delete-button">Delete</button>
+                                </form>
                             </div>                        
                         @endif                
                     </div>
-                </a>
             @endif
         @endforeach
     </div>
@@ -76,13 +84,17 @@
                             <img src="{{asset('images/'.$trainer->image)}}" alt="">
                         </div>
                         <p class="subtext">{{ $trainer->user->name }}</p>
+                </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-danger delete-button mb-2" href="#" role="button">Delete</a>
-                            </div>                        
+                                <form action="/trainer/{{ $trainer->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger delete-button">Delete</button>
+                                </form>
+                            </div>                         
                         @endif
                     </div>
-                </a>
             @endif
         @endforeach
     </div>
@@ -116,7 +128,11 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->program->name }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-success">Add as Trainer</button>
+                                            <form action="/trainer" method="POST" enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                <button type="submit" class="btn btn-success">Add as Trainer</button>
+                                            </form>                                        
                                         </td>
                                     </tr>
                                     @php
@@ -158,7 +174,11 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->program->name }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-success">Add as Trainer</button>
+                                            <form action="/trainer" method="POST" enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                <button type="submit" class="btn btn-success">Add as Trainer</button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @php

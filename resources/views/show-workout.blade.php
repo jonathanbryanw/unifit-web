@@ -72,6 +72,7 @@
         }
     });
 </script>
+<script src="{{asset('js/video-script.js')}}"></script>
 @endsection
 
 @section('content')
@@ -133,25 +134,29 @@
                 }
                 if($user == 0){
                     echo '<div class="work">';  
-                    echo '<p class="workTitle">'.$sessionc.'. '.$workoutd->title.'</p>';
+                    echo '<p class="workTitle" id="video-'.$i.'">'.$sessionc.'. '.$workoutd->title.'</p>';
                     echo '<button class="checkButton">Do!</button>';
                     echo '</div>';
                 }else{
                     if($workoutsp[$i]->status == 'Not Done'){
-                        echo '<div class="work">';  
-                        echo '<p class="workTitle">'.$sessionc.'. '.$workoutd->title.'</p>';
+                        echo '<div class="work">';                          
+                        echo '<p class="workTitle" id="video-'.$i.'">'.$sessionc.'. '.$workoutd->title.'</p>';
                         echo '<button class="checkButton" data-workoutprogress-id="'.$workoutsp[$i]->id.'">Do!</button>'; 
                         echo '</div>';
                     }else if($workoutsp[$i]->status == 'Done'){
                         echo '<div class="work">';  
-                        echo '<p class="workTitle">'.$sessionc.'. '.$workoutd->title.'</p>';
+                        echo '<p class="workTitle" id="video-'.$i.'">'.$sessionc.'. '.$workoutd->title.'</p>';
                         echo '<button class="checkButton completed" data-workoutprogress-id="'.$workoutsp[$i]->id.'">Done!</button>'; 
                         echo '</div>';
                     }
                 }
+                echo '<div id="video-links-'.$i.'"></div>';
+                echo '<script>';
+                echo 'getYouTubeVideoLink("' . $workoutd->title . '", ' . $i . ');';
+                echo '</script>';
                 $i++;        
                 @endphp
-                
+
             @endforeach
             </div>
         </div>

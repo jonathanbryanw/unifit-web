@@ -5,13 +5,22 @@
     height: 300px;
     top: 50px;
     background: linear-gradient(180deg, rgba(129, 217, 143, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
-    padding: 10vh 0;
+    padding: 15vh 0;
     color: #5A5A5A;
     text-align: center;
     z-index: -1;
 }
 .section{
     margin: 260px 6vw 100px 5vw;  
+}
+
+.b-card{
+    padding: 5px 10px;
+    color: white;
+    background-color: #454545;
+    width: fit-content;
+    text-decoration: none;
+    margin-left: 70vw;
 }
 
 .editForm{
