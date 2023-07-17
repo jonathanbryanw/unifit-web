@@ -36,7 +36,7 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <a href="/workout/{{ $workout->id }}" class="card-link">
+                        <a href="/workout/{{ $workout->id }}" class="card-link" draggable="false">
                             <img src="{{asset('images/'.$workout->image)}}" alt="">
                             <h2 class="subtitle">{{ $workout->name }}</h2>
                             <p class="card-subtext">
@@ -62,7 +62,7 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <a href="/workout/{{ $workout->id }}" class="card-link">
+                        <a href="/workout/{{ $workout->id }}" class="card-link" draggable="false">
                             <img src="{{asset('images/'.$workout->image)}}" alt="">
                             <h2 class="subtitle">{{ $workout->name }}</h2>
                             <p class="card-subtext">
@@ -87,7 +87,7 @@
                         $text = strtok($description, '.');
                     @endphp
                     <div class="card">
-                        <a href="/workout/{{ $workout->id }}" class="card-link">
+                        <a href="/workout/{{ $workout->id }}" class="card-link" draggable="false">
                             <img src="{{asset('images/'.$workout->image)}}" alt="">
                             <h2 class="subtitle">{{ $workout->name }}</h2>
                             <p class="card-subtext">
