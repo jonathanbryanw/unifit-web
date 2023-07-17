@@ -17,6 +17,15 @@
 .trainers{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trainer {
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: flex-start;
+    width: 200px;
+    height: 282.6px;
 }
 
 .image{

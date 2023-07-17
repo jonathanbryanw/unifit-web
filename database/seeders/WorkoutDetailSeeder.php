@@ -64,7 +64,7 @@ class WorkoutDetailSeeder extends Seeder
             [
                 'workout_id' => 1,
                 'session' => 2,
-                'title' => 'Take a day off or do 20 to 30 minutes of gentle cardio like jogging, swimming, or cycling.'
+                'title' => 'Gentle cardio or take a day off: 20 to 30 minutes of jogging, swimming, or cycling.'
             ],
             [
                 'workout_id' => 1,
@@ -109,7 +109,7 @@ class WorkoutDetailSeeder extends Seeder
             [
                 'workout_id' => 1,
                 'session' => 4,
-                'title' => 'Rest day or engage in light cardio activities like jogging, swimming, or cycling for 20-30 minutes.'
+                'title' => 'Gentle cardio or take a day off: 20 to 30 minutes of jogging, swimming, or cycling.'
             ],
             [
                 'workout_id' => 1,

@@ -54,7 +54,15 @@ p{
 .workTitle{
     padding: 4px;
     flex: 1;
+    text-decoration: none;
+    color: #000000;
+    user-select: auto;
 }
+
+.selectable {
+    user-select: auto;
+}
+  
 
 .checkButton{
     padding: 1px 10px;

@@ -5,6 +5,14 @@
 @endsection
 
 @section('js')
+<script>
+    function confirmDelete() {
+        return confirm('Are you sure you want to delete this trainer?');
+    }
+    function confirmAdd() {
+        return confirm('Are you sure you want to add this trainer?');
+    }
+</script>
 @endsection
 
 @section('content')
@@ -35,7 +43,7 @@
                 </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
-                                <form action="/trainer/{{ $trainer->id }}" method="POST">
+                                <form action="/trainer/{{ $trainer->id }}" method="POST" onsubmit="return confirmDelete()">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger delete-button">Delete</button>
@@ -44,6 +52,7 @@
                         @endif
                     </div>
             @endif
+            
         @endforeach
     </div>
     <div class="text">
@@ -61,7 +70,7 @@
                 </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
-                                <form action="/trainer/{{ $trainer->id }}" method="POST">
+                                <form action="/trainer/{{ $trainer->id }}" method="POST" onsubmit="return confirmDelete()">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger delete-button">Delete</button>
@@ -87,7 +96,7 @@
                 </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
-                                <form action="/trainer/{{ $trainer->id }}" method="POST">
+                                <form action="/trainer/{{ $trainer->id }}" method="POST" onsubmit="return confirmDelete()">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger delete-button">Delete</button>
@@ -128,57 +137,11 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->program->name }}</td>
                                         <td>
-                                            <form action="/trainer" method="POST" enctype="multipart/form-data">
+                                            <form action="/trainer" method="POST" enctype="multipart/form-data" onsubmit="return confirmAdd()">
                                                 @csrf
                                                 <input type="hidden" name="user_id" value="{{ $user->id }}">
                                                 <button type="submit" class="btn btn-success">Add as Trainer</button>
                                             </form>                                        
-                                        </td>
-                                    </tr>
-                                    @php
-                                        $count++;
-                                    @endphp
-                                @endif
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="deleteTrainerModal" tabindex="-1" role="dialog" aria-labelledby="deleteTrainerModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="userModalLabel">Delete Trainer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Program</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @php
-                                $count=1;
-                            @endphp
-                            @foreach($users as $user)
-                                @if($user->role_id == 2)
-                                    <tr>
-                                        <td>{{ $count}}</td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->program->name }}</td>
-                                        <td>
-                                            <form action="/trainer" method="POST" enctype="multipart/form-data">
-                                                @csrf
-                                                <input type="hidden" name="user_id" value="{{ $user->id }}">
-                                                <button type="submit" class="btn btn-success">Add as Trainer</button>
-                                            </form>
                                         </td>
                                     </tr>
                                     @php

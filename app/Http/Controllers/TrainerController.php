@@ -66,6 +66,10 @@ class TrainerController extends Controller
             'category' => 'Sample Category',
             'image' => $imageName
         ]);
+
+        $user = User::where('id', $request->user_id)->update([
+            'role_id' => 3,
+        ]);
         return redirect('/trainer');
     }
 
@@ -160,6 +164,9 @@ class TrainerController extends Controller
     public function destroy($id)
     {   
         $trainer = Trainer::findOrFail($id);
+        $user = User::where('id', $trainer->user->id)->update([
+            'role_id' => 2,
+        ]);
 
         $trainer->delete();
         return redirect('/trainer');
