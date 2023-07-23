@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'description',
+        'category',
+        'image'
     ];
 
     /**
@@ -41,10 +44,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function trainer(){
-        return $this->hasOne(Trainer::class);
-    }
 
     public function program(){
         return $this->belongsTo(Program::class);

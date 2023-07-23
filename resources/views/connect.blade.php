@@ -33,13 +33,13 @@
     </div>
     <div class="trainers">
         @foreach($trainers as $trainer)
-            @if ($trainer->user->program_id == 1)
+            @if ($trainer->program_id == 1)
                 <a href="/trainer/{{ $trainer->id }}">
                     <div class="trainer">
                         <div class="image">
                             <img src="{{asset('images/'.$trainer->image)}}" alt="">
                         </div>
-                        <p class="subtext">{{ $trainer->user->name }}</p>
+                        <p class="subtext">{{ $trainer->name }}</p>
                 </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
@@ -60,13 +60,13 @@
     </div>
     <div class="trainers">
         @foreach($trainers as $trainer)
-            @if ($trainer->user->program_id == 3)
+            @if ($trainer->program_id == 3)
                 <a href="/trainer/{{ $trainer->id }}">
                     <div class="trainer">
                         <div class="image">
                             <img src="{{asset('images/'.$trainer->image)}}" alt="">
                         </div>
-                        <p class="subtext">{{ $trainer->user->name }}</p>
+                        <p class="subtext">{{ $trainer->name }}</p>
                 </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">
@@ -86,13 +86,13 @@
     </div>
     <div class="trainers">
         @foreach($trainers as $trainer)
-            @if ($trainer->user->program_id == 2)
+            @if ($trainer->program_id == 2)
                 <a href="/trainer/{{ $trainer->id }}">
                     <div class="trainer">
                         <div class="image">
                             <img src="{{asset('images/'.$trainer->image)}}" alt="">
                         </div>
-                        <p class="subtext">{{ $trainer->user->name }}</p>
+                        <p class="subtext">{{ $trainer->name }}</p>
                 </a>
                         @if ($role == 1)
                             <div class="d-flex justify-content-center">

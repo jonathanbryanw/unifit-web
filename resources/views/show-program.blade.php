@@ -43,11 +43,13 @@
                     $text = strtok($description, '.');
                 @endphp
                 <div class="card">
-                    <img src="{{asset('images/'.$workout->image)}}" alt="">
-                    <h2 class="subtitle">{{ $workout->name }}</h2>
-                    <p class="card-subtext">
-                        {{ $text }}.
-                    </p>
+                    <a href="/workout/{{ $workout->id }}" class="card-link" draggable="false">
+                        <img src="{{asset('images/'.$workout->image)}}" alt="">
+                        <h2 class="subtitle">{{ $workout->name }}</h2>
+                        <p class="card-subtext">
+                            {{ $text }}.
+                        </p>
+                    </a>
                     <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                 </div>
             @endforeach
@@ -64,11 +66,13 @@
                     $text = strtok($description, '.');
                 @endphp
                 <div class="card">
-                    <img src="{{asset('images/'.$diet->image)}}" alt="">
-                    <h2 class="subtitle">{{ $diet->category }}</h2>
-                    <p class="card-subtext">
-                        {{ $text }}.
-                    </p>
+                    <a href="/diet/{{ $diet->id }}" class="card-link">
+                        <img src="{{asset('images/'.$diet->image)}}" alt="">
+                        <h2 class="subtitle">{{ $diet->category }}</h2>
+                        <p class="card-subtext">
+                            {{ $text }}.
+                        </p>
+                    </a>
                     <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
                 </div>
             @endforeach

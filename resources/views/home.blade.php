@@ -9,6 +9,7 @@
 <script src="{{asset('js/home-script.js')}}"></script>
 <script>
     document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+    // ^^ To get the scrollbar width
 </script>
 @endsection
 
@@ -42,7 +43,7 @@
             <div class="t-head">
                 <h1 class="title">What is <span style="color:#81D98F">UniFit?</span></h1>
                 <h2 class="subtitle">For all of your fitness requirements, UniFit is the place to be.</h2>
-                <p class="t-content">UniFit transforms the way you achieve your health goals with a unified strategy that integrates multiple exercise activities, workout regimens, food advice, and a trainer search platform. Experience the ease of custom training plans created for your specific profile, using your height and weight to suggest the ideal program. Visual progress charts help you stay motivated and keep tabs on your progress, and the thorough workout checklist routines make sure you never miss a step. You gain a chance to direct your exercise journey and realize your best potential thanks to UniFit.</p>
+                <p class="t-content">UniFit transforms the way you achieve your health goals with a unified strategy that integrates multiple exercise activities, workout regimens, food advice, and a trainer search platform. Experience the ease of custom training plans created for your specific profile, using your height and weight to suggest the ideal program. Visual progress charts help you stay motivated and keep tabs on your progress, and the thorough workout checklist routines make sure you never miss a step. You gain a chance to direct your exercise journey and realize your best potential thanks to UniFit.</p>
                 <a class="b-card" href="/about/" role="button">Learn More</a>
             </div>
         </div>
@@ -229,11 +230,13 @@
                     $text = strtok($description, '.');
                 @endphp
                 <div class="card">
-                    <img src="{{asset('images/'.$diet->image)}}" alt="">
-                    <h2 class="subtitle">{{ $diet->category }}</h2>
-                    <p class="card-subtext">
-                        {{ $text }}.
-                    </p>
+                    <a href="/diet/{{ $diet->id }}" class="card-link">
+                        <img src="{{asset('images/'.$diet->image)}}" alt="">
+                        <h2 class="subtitle">{{ $diet->category }}</h2>
+                        <p class="card-subtext">
+                            {{ $text }}.
+                        </p>
+                    </a>
                     <a class="b-card" href="/diet/{{ $diet->id }}" role="button">Read Recipe</a>
                 </div>
             @endforeach
@@ -249,11 +252,13 @@
                     $text = strtok($description, '.');
                 @endphp
                 <div class="card">
-                    <img src="{{asset('images/'.$workout->image)}}" alt="">
-                    <h2 class="subtitle">{{ $workout->name }}</h2>
-                    <p class="card-subtext">
-                        {{ $text }}.
-                    </p>
+                    <a href="/workout/{{ $workout->id }}" class="card-link" draggable="false">
+                        <img src="{{asset('images/'.$workout->image)}}" alt="">
+                        <h2 class="subtitle">{{ $workout->name }}</h2>
+                        <p class="card-subtext">
+                            {{ $text }}.
+                        </p>
+                    </a>
                     <a class="b-card" href="/workout/{{ $workout->id }}" role="button">See Workout</a>
                 </div>
             @endforeach

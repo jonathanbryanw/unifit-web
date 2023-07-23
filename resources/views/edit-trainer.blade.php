@@ -29,13 +29,13 @@
         <div class="text">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ $trainer->user->name }}" required>
+                <input type="text" class="form-control" id="name" name="name" value="{{ $trainer->name }}" required>
             </div>
             <div class="form-group">
                 <label for="program">Program:</label>
                 <select class="form-select" id="program" name="program">
                     @foreach ($programs as $program)
-                        @if ($trainer->user->program == $program)
+                        @if ($trainer->program == $program)
                             <option selected value="{{$program->id}}">{{$program->name}}</option>                            
                         @else
                             <option value="{{$program->id}}">{{$program->name}}</option>

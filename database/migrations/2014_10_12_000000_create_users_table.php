@@ -25,7 +25,9 @@ return new class extends Migration
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->unsignedBigInteger('program_id')->default(1);
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
-
+            $table->longText('description')->nullable();
+            $table->string('category')->nullable();
+            $table->string('image')->nullable();
         });
     }
 

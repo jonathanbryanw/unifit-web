@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Diet;
 use App\Models\Program;
-use App\Models\Trainer;
 use App\Models\User;
 use App\Models\Workout;
 use Illuminate\Http\Request;
@@ -51,9 +50,8 @@ class ProgramController extends Controller
     public function show($id)
     {
         $program = Program::find($id);
-        $trainers = Trainer::join('users', 'trainers.user_id', '=', 'users.id')
-                            ->where('users.program_id', $id)
-                            ->select('trainers.id', 'users.name', 'trainers.image')
+        $trainers = User::where('users.program_id', $id)
+                            ->where('role_id', 3)
                             ->get();
         $workouts = Workout::where('program_id', $id)
                             ->get();

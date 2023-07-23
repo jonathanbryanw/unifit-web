@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
             ProgramSeeder::class,
             RoleSeeder::class,
             UserSeeder::class,
-            TrainerSeeder::class,
             WorkoutSeeder::class,
             WorkoutDetailSeeder::class,
             DietSeeder::class,
