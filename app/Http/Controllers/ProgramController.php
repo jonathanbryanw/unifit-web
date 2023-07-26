@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Diet;
 use App\Models\Program;
-use App\Models\User;
+
 use App\Models\Workout;
 use Illuminate\Http\Request;
 
@@ -50,7 +51,7 @@ class ProgramController extends Controller
     public function show($id)
     {
         $program = Program::find($id);
-        $trainers = User::where('users.program_id', $id)
+        $trainers = Account::where('accounts.program_id', $id)
                             ->where('role_id', 3)
                             ->get();
         $workouts = Workout::where('program_id', $id)
@@ -87,10 +88,10 @@ class ProgramController extends Controller
     {
         $program = $request->input('program');
     
-        $user = User::findOrFail($id);
+        $account = Account::findOrFail($id);
     
-        $user->program_id = $program;
-        $user->save();
+        $account->program_id = $program;
+        $account->save();
     
     }
 

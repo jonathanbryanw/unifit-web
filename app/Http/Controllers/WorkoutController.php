@@ -56,38 +56,38 @@ class WorkoutController extends Controller
     {
         if(auth()->check()){
             $workout = Workout::find($id);
-            $user = auth()->user()->id;
+            $account = auth()->user()->id;
             $firstwp = $workout->workoutdetail[0]->id;
             $lastwp = $workout->workoutdetail[count($workout->workoutdetail)-1]->id;
-            $workoutsp = WorkoutProgress::where('user_id', $user)
+            $workoutsp = WorkoutProgress::where('account_id', $account)
                                         ->whereBetween('workoutdetail_id', [$firstwp,$lastwp])
                                         ->get();
             if($workoutsp->isEmpty()){
                 for($i = $firstwp; $i <= $lastwp; $i++){
                     $newWorkoutProgress = new WorkoutProgress();
                     $newWorkoutProgress->workoutdetail_id = $i;
-                    $newWorkoutProgress->user_id = $user;
+                    $newWorkoutProgress->account_id = $account;
                     $newWorkoutProgress->status = 'Not Done';
                     $newWorkoutProgress->save();
                 }
 
-                $workoutsp = WorkoutProgress::where('user_id', $user)
+                $workoutsp = WorkoutProgress::where('account_id', $account)
                                             ->whereBetween('workoutdetail_id', [$firstwp,$lastwp])
                                             ->get();
             }
             return view('show-workout', [
                 'workout' => $workout,
-                'user' => $user,
+                'account' => $account,
                 'workoutsp' => $workoutsp
             ]);
             
         }else{
             $workout = Workout::find($id);
-            $user = 0;
+            $account = 0;
             $workoutsp = [];
             return view('show-workout', [
                'workout' => $workout,
-               'user' => $user,
+               'account' => $account,
                'workoutsp' => $workoutsp
             ]);
         }

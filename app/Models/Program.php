@@ -19,7 +19,7 @@ class Program extends Model
     public function workout(){
         return $this->hasMany(Workout::class);
     }
-    public function user(){
-        return $this->hasMany(User::class);
+    public function account(){
+        return $this->hasMany(Account::class);
     }
 }

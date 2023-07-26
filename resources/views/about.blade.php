@@ -15,7 +15,7 @@
         <div class="t-head">
             <h1 class="c-title">Get To Know<span style="color:#81D98F"> About Us</span></h1>
             <p class="subtext">
-                Our goal at UniFit is to empower people on their fitness journey by offering a centralized platform that integrates exercise routines, food advice, links to trainers, and interactive features. With the help of a team of committed professionals, we work to provide a welcoming community where users can access tailored resources and qualified advice, empowering them to realize their full potential, achieve their health and fitness objectives, and live happier, more fulfilling lives.
+                Our goal at UniFit is to empower people on their fitness journey by offering a centralized platform that integrates exercise routines, food advice, links to trainers, and interactive features. With the help of a team of committed professionals, we work to provide a welcoming community where accounts can access tailored resources and qualified advice, empowering them to realize their full potential, achieve their health and fitness objectives, and live happier, more fulfilling lives.
             </p>
         </div>
         <div class="img-top">

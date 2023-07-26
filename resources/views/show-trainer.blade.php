@@ -15,7 +15,7 @@
 @endphp
 <h3 class="header">Meet your trainer!</h3>
 <div class="window">
-    @if ($user == $trainer->id || $role == 1)
+    @if ($account == $trainer->id || $role == 1)
         <a class="b-card" href="/trainer/{{$trainer->id}}/edit" role="button">Edit Trainer</a>
     @endif
     <div class="section">

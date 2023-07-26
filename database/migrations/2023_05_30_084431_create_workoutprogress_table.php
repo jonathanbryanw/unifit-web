@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('workoutdetail_id')->default(1);
             $table->foreign('workoutdetail_id')->references('id')->on('workoutdetails')->onDelete('cascade');
-            $table->unsignedBigInteger('user_id')->default(1);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('account_id')->default(1);
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->string('status');
             $table->timestamps();
         });

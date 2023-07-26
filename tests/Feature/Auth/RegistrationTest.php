@@ -17,7 +17,7 @@ class RegistrationTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_new_users_can_register(): void
+    public function test_new_accounts_can_register(): void
     {
         $response = $this->post('/register', [
             'name' => 'Test User',

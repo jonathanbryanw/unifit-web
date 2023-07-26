@@ -24,7 +24,7 @@
         </div>
     </div>  
     @if ($role == 1)
-        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#userModal">Add Trainer</button>
+        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#accountModal">Add Trainer</button>
     @endif
 </div>
 <div class="content-1">
@@ -109,11 +109,11 @@
     </div>
 </div>
 @if ($role == 1)
-    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="userModalLabel">Add Trainer</h5>
+                    <h5 class="modal-title" id="accountModalLabel">Add Trainer</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -130,16 +130,16 @@
                             @php
                                 $count=1;
                             @endphp
-                            @foreach($users as $user)
-                                @if($user->role_id == 2)
+                            @foreach($accounts as $account)
+                                @if($account->role_id == 2)
                                     <tr>
                                         <td>{{ $count}}</td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->program->name }}</td>
+                                        <td>{{ $account->name }}</td>
+                                        <td>{{ $account->program->name }}</td>
                                         <td>
                                             <form action="/trainer" method="POST" enctype="multipart/form-data" onsubmit="return confirmAdd()">
                                                 @csrf
-                                                <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                <input type="hidden" name="account_id" value="{{ $account->id }}">
                                                 <button type="submit" class="btn btn-success">Add as Trainer</button>
                                             </form>                                        
                                         </td>

@@ -7,7 +7,7 @@
 @section('js')
 <script>
     $(document).ready(function() {
-        var isLoggedIn = {!! json_encode($user) !!};
+        var isLoggedIn = {!! json_encode($account) !!};
 
         $('.checkButton').on('click', function() {
             if (isLoggedIn) {
@@ -132,7 +132,7 @@
                     echo '<p class="day-title">Day ' . $session . ':</p>';
                     echo '<div class="day">';                    
                 }
-                if($user == 0){
+                if($account == 0){
                     echo '<div class="work">';  
                     echo '<p class="workTitle" id="video-'.$i.'">'.$sessionc.'. '.$workoutd->title.'</p>';
                     echo '<button class="checkButton">Do!</button>';
@@ -161,7 +161,7 @@
             </div>
         </div>
     </div>
-    @if ($user == 0)
+    @if ($account == 0)
         <div class="bg-warning sticky-bottom p-3">
         <h4 class="text-center">You are not logged in. Progress will not be saved.</h4>
         </div>

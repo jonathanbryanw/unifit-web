@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class UserSeeder extends Seeder
+class AccountSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Admin1',
             'email' => 'admin1@email.com',
             'password' => bcrypt("12345678"),
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'role_id' => 1,
             'program_id' => 3
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Member1',
             'email' => 'member1@email.com',
             'password' => bcrypt("12345678"),
@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
             'role_id' => 2,
             'program_id' => 1
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Jonathan',
             'email' => 'trainer13@email.com',
             'password' => bcrypt("12345678"),
@@ -48,7 +48,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'jonathan.jpg'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'John',
             'email' => 'trainer01@email.com',
             'password' => bcrypt("12345678"),
@@ -61,7 +61,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-01.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Lucas',
             'email' => 'trainer02@email.com',
             'password' => bcrypt("12345678"),
@@ -74,7 +74,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-02.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Ben',
             'email' => 'trainer03@email.com',
             'password' => bcrypt("12345678"),
@@ -87,7 +87,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-03.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Jessica',
             'email' => 'trainer04@email.com',
             'password' => bcrypt("12345678"),
@@ -100,7 +100,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-04.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Hendrick',
             'email' => 'trainer05@email.com',
             'password' => bcrypt("12345678"),
@@ -113,7 +113,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-05.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Kim',
             'email' => 'trainer06@email.com',
             'password' => bcrypt("12345678"),
@@ -126,7 +126,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-06.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Hemsworth',
             'email' => 'trainer07@email.com',
             'password' => bcrypt("12345678"),
@@ -139,7 +139,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-07.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Chris',
             'email' => 'trainer08@email.com',
             'password' => bcrypt("12345678"),
@@ -152,7 +152,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-08.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Urs',
             'email' => 'trainer09@email.com',
             'password' => bcrypt("12345678"),
@@ -165,7 +165,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-09.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Ramon',
             'email' => 'trainer10@email.com',
             'password' => bcrypt("12345678"),
@@ -178,7 +178,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-10.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Ainsley',
             'email' => 'trainer11@email.com',
             'password' => bcrypt("12345678"),
@@ -191,7 +191,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-11.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Ruff',
             'email' => 'trainer12@email.com',
             'password' => bcrypt("12345678"),
@@ -204,7 +204,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-12.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Brian',
             'email' => 'trainer14@email.com',
             'password' => bcrypt("12345678"),
@@ -217,7 +217,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-14.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Jeff',
             'email' => 'trainer15@email.com',
             'password' => bcrypt("12345678"),
@@ -230,7 +230,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-15.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'John',
             'email' => 'trainer16@email.com',
             'password' => bcrypt("12345678"),
@@ -243,7 +243,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-16.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Luke',
             'email' => 'trainer17@email.com',
             'password' => bcrypt("12345678"),
@@ -256,7 +256,7 @@ class UserSeeder extends Seeder
             'category' => 'PT Foundation Programme;MMA Trainer;Pad Master Course - Muaythai',
             'image' => 'trainer-17.png'
         ]);
-        DB::table('users')->insert([
+        DB::table('accounts')->insert([
             'name' => 'Jason',
             'email' => 'trainer18@email.com',
             'password' => bcrypt("12345678"),

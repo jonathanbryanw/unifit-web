@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('weightdetails', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->default(1);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('account_id')->default(1);
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->double('weight');
             $table->timestamps();
         });

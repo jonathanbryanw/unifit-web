@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function updateProgram(program_id, user_id) {
+    function updateProgram(program_id, account_id) {
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
         $.ajax({
-            url: '/category/' + user_id,
+            url: '/category/' + account_id,
             type: 'PUT',
             headers: {
                 'X-CSRF-TOKEN': csrfToken
             },
             data: {
                 program: program_id,
-                user: user_id
+                user: account_id
             },
             success: function(response) {
                 console.log('User Program updated successfully:');

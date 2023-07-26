@@ -8,7 +8,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <script>
     $(document).ready(function() {
-        var isLoggedIn = {!! json_encode($user) !!};
+        var isLoggedIn = {!! json_encode($account) !!};
         var newWeightDetails = [];
 
         $('#bmiForm').submit(function(event) {
@@ -19,30 +19,30 @@
                 const newExistingRecord = newWeightDetails.find(record => record.updated_at.includes(currentDate));
                 if (existingRecord) {
                     var weight= $('#weight').val();
-                    var user = @json($user);
+                    var account = @json($account);
                     var weight_id = existingRecord.id;
-                    updateWeightDetail(weight, weight_id, user);                    
+                    updateWeightDetail(weight, weight_id, account);                    
                 } else if(newExistingRecord){
                     var weight= $('#weight').val();
-                    var user = @json($user);
+                    var account = @json($account);
                     var weight_id = newExistingRecord.id;
-                    updateWeightDetail(weight, weight_id, user);
+                    updateWeightDetail(weight, weight_id, account);
                 } else{
                     var weight= $('#weight').val();
-                    var user = @json($user);
-                    insertWeightDetail(weight, user);
+                    var account = @json($account);
+                    insertWeightDetail(weight, account);
                 }
             }
         });
 
-        function insertWeightDetail(weight, user_id) {
+        function insertWeightDetail(weight, account_id) {
             $.ajax({
                 url: '/program',
                 type: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
                     weight: weight,
-                    user: user_id
+                    account: account_id
                 },
                 success: function(response) {
                     console.log('Weight Detail inserted successfully.');
@@ -56,14 +56,14 @@
             });
         }
 
-        function updateWeightDetail(weight, weight_id, user_id) {
+        function updateWeightDetail(weight, weight_id, account_id) {
             $.ajax({
                 url: '/program/'+weight_id,
                 type: 'PUT',
                 data: {
                     _token: '{{ csrf_token() }}',
                     weight: weight,
-                    user: user_id
+                    account: account_id
                 },
                 success: function(response) {
                     console.log('Weight Detail updated successfully.');
@@ -87,7 +87,7 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="{{asset('js/bmi-script.js')}}" data-is-logged-in="{{$user}}"></script>
+<script src="{{asset('js/bmi-script.js')}}" data-is-logged-in="{{$account}}"></script>
 @endsection
 
 @section('content')
@@ -123,14 +123,14 @@
     <div class="w-text">
         <h1 class="w-title">Your <span style="color:#81D98F">Weight Progress</span></h1>
     </div>
-    @if ($user != 0 && $weightdetails->isEmpty())
+    @if ($account != 0 && $weightdetails->isEmpty())
         <div id="weightMessage" class="bg-secondary z-2 position-absolute w-50 p-3">
             <h4 class="text-center">You need to insert your weight first.</h4>
         </div>
     @endif
     <canvas id="myChart"></canvas>
 </div>
-@if ($user == 0)
+@if ($account == 0)
     <div class="bg-warning sticky-bottom p-3">
         <h4 class="text-center">You are not logged in. Your weight will not be saved.</h4>
     </div>

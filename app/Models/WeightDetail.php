@@ -10,9 +10,9 @@ class WeightDetail extends Model
     use HasFactory;
     protected $table = 'weightdetails';
 
-    protected $fillable = ['user_id', 'weight'];
+    protected $fillable = ['account_id', 'weight'];
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function account(){
+        return $this->belongsTo(Account::class);
     }
 }

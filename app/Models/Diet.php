@@ -11,7 +11,7 @@ class Diet extends Model
 
     protected $table = 'diets';
 
-    protected $fillable = ['name', 'program_id', 'description', 'user_id', 'photo'];
+    protected $fillable = ['name', 'program_id', 'description', 'account_id', 'photo'];
 
     public function program(){
         return $this->belongsTo(Program::class);

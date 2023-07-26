@@ -16,11 +16,11 @@ class WeightDetailController extends Controller
     public function index()
     {
         if(auth()->check()){
-            $user = auth()->user()->id;
-            $weightdetails = WeightDetail::where('user_id', $user)
+            $account = auth()->user()->id;
+            $weightdetails = WeightDetail::where('account_id', $account)
                                         ->get();
             return view('program', [
-                'user' => $user,
+                'account' => $account,
                 'weightdetails' => $weightdetails
             ]);
             
@@ -50,18 +50,18 @@ class WeightDetailController extends Controller
     {
         $request->validate([
             'weight' => 'required|integer',
-            'user' => 'required|integer',
+            'account' => 'required|integer',
         ]);
         $newWeightDetail =new WeightDetail();
         $newWeightDetail->weight = $request->weight;
-        $newWeightDetail->user_id = $request->user;
+        $newWeightDetail->account_id = $request->account;
         $newWeightDetail->save();
 
-        $weightdetails = WeightDetail::where('user_id', $request->user)
+        $weightdetails = WeightDetail::where('account_id', $request->account)
                                     ->get();
         return response()->json([
             'weightdetails' => $weightdetails,
-            'user' => $request->user
+            'account' => $request->account
         ]);
     }
 
@@ -103,12 +103,12 @@ class WeightDetailController extends Controller
         $weightDetail->weight = $weight;
         $weightDetail->save();
 
-        $weightdetails = WeightDetail::where('user_id', $request->user)
+        $weightdetails = WeightDetail::where('account_id', $request->account)
                                         ->get();
     
         return response()->json([
             'weightdetails' => $weightdetails,
-            'user' => $request->user
+            'account' => $request->account
         ]);
     }
 

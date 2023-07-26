@@ -12,17 +12,17 @@ use Illuminate\View\View;
 class ProfileController extends Controller
 {
     /**
-     * Display the user's profile form.
+     * Display the account's profile form.
      */
     public function edit(Request $request): View
     {
         return view('profile.edit', [
-            'user' => $request->user(),
+            'account' => $request->user(),
         ]);
     }
 
     /**
-     * Update the user's profile information.
+     * Update the account's profile information.
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
@@ -42,15 +42,15 @@ class ProfileController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
-        $request->validateWithBag('userDeletion', [
+        $request->validateWithBag('accountDeletion', [
             'password' => ['required', 'current-password'],
         ]);
 
-        $user = $request->user();
+        $account = $request->user();
 
         Auth::logout();
 
-        $user->delete();
+        $account->delete();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();

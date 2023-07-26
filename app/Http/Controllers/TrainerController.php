@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Program;
-use App\Models\User;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,27 +17,27 @@ class TrainerController extends Controller
      */
     public function index()
     {
-        $trainers = User::where('role_id', 3)
+        $trainers = Account::where('role_id', 3)
                     ->get(); 
         if(auth()->check()){
-            $user = auth()->user()->role_id;
-            $users = [];
-            if($user == 1){
-                $users = User::all();
+            $account = auth()->user()->role_id;
+            $accounts = [];
+            if($account == 1){
+                $accounts = Account::all();
             }
             return view('connect', [
                 'trainers' => $trainers,
-                'role' => $user,
-                'users' => $users
+                'role' => $account,
+                'accounts' => $accounts
             ]);
         }
         else{
-            $user = 0;
-            $users = [];
+            $account = 0;
+            $accounts = [];
             return view('connect', [
                 'trainers' => $trainers,
-                'role' => $user,
-                'users' => $users
+                'role' => $account,
+                'accounts' => $accounts
             ]);
         }
     }
@@ -60,8 +61,8 @@ class TrainerController extends Controller
     public function store(Request $request)
     {
         $imageName = 'user.png';
-        $id = $request->user_id;
-        $trainer = User::where('id', $id)->update([
+        $id = $request->account_id;
+        $trainer = Account::where('id', $id)->update([
             'description' => 'This is an automated description.',
             'role_id' => 3,
             'category' => 'Sample Category',
@@ -79,22 +80,22 @@ class TrainerController extends Controller
      */
     public function show($id)
     {
-        $trainer = User::find($id);
+        $trainer = Account::find($id);
         if(auth()->check()){
             $role = auth()->user()->role_id;
-            $user = auth()->user()->id;
+            $account = auth()->user()->id;
             return view('show-trainer', [
                 'trainer' => $trainer,
                 'role' => $role,
-                'user' => $user
+                'account' => $account
             ]);
         }else{
             $role = 0;
-            $user = 0;
+            $account = 0;
             return view('show-trainer', [
                 'trainer' => $trainer,
                 'role' => $role,
-                'user' => $user
+                'account' => $account
             ]);
         }
     }
@@ -107,11 +108,11 @@ class TrainerController extends Controller
      */
     public function edit($id)
     {   
-        $user = Auth::user();
-        $trainer = User::findOrFail($id);
+        $account = Auth::user();
+        $trainer = Account::findOrFail($id);
         $programs = Program::all();
 
-        if($user->role_id == 1 || $trainer->id == $user->id){
+        if($account->role_id == 1 || $trainer->id == $account->id){
             return view('edit-trainer', [
                 'trainer' => $trainer,
                 'programs' => $programs
@@ -134,11 +135,11 @@ class TrainerController extends Controller
         if(isset($request->image)) {
             $imageName = time() . '_' . $request->name . '.' . $request->image->extension();
             $request->image->move(public_path('images'), $imageName);
-            $trainer = User::where('id', $id)->update([
+            $trainer = Account::where('id', $id)->update([
                 'image' => $imageName
             ]);
         }
-        $trainer = User::where('id', $id)->update([
+        $trainer = Account::where('id', $id)->update([
             'category' => $request->categories,
             'description' => $request->description,
             'name' => $request->name,
@@ -156,7 +157,7 @@ class TrainerController extends Controller
      */
     public function destroy($id)
     {   
-        $trainer = User::where('id', $id)->update([
+        $trainer = Account::where('id', $id)->update([
             'role_id' => 2,
         ]);
 

@@ -11,7 +11,7 @@ class WorkoutProgress extends Model
 
     protected $table = 'workoutprogress';
 
-    protected $fillable = ['workoutdetail_id', 'user_id', 'status'];
+    protected $fillable = ['workoutdetail_id', 'account_id', 'status'];
 
     public function workoutdetail(){
         return $this->belongsTo(WorkoutDetail::class);
