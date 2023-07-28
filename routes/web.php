@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\DietController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\TrainerController;
 use App\Http\Controllers\WeightDetailController;
@@ -30,9 +30,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [AccountController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [AccountController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [AccountController::class, 'destroy'])->name('profile.destroy');
 });
 
 require_once __DIR__.'/auth.php';
